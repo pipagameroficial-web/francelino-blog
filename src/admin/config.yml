@@ -17,3 +17,26 @@ collections:
       - {label: "Resumo para o Google (SEO)", name: "description", widget: "string"}
       - {label: "Data de Publicação", name: "date", widget: "datetime"}
       - {label: "Texto do Artigo", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "⚙️ Configurações do Site"
+    files:
+      - label: "Tags do Google (GTM / Analytics)"
+        name: "google_tags"
+        file: "src/_data/settings.json"
+        fields:
+          - label: "Código do Google Tag Manager (GTM)"
+            name: "gtm_id"
+            widget: "string"
+            required: false
+            hint: "Cole aqui o ID do GTM. Exemplo: GTM-XXXXXXX"
+          - label: "Tag do Google Search Console"
+            name: "google_verification"
+            widget: "string"
+            required: false
+            hint: "Cole aqui o código de verificação do Search Console"
+          - label: "ID do Google Analytics (GA4)"
+            name: "google_analytics_id"
+            widget: "string"
+            required: false
+            hint: "Cole aqui o ID do GA4. Exemplo: G-XXXXXXXXXX"
