@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Netlify Identity (Login) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francelino Turismo | A Sua Agência de Viagens</title>
+    <link rel="stylesheet" href="/agencia-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-dark-bg">
+            <div class="header-dark-content">
+                <a href="#" class="logo-new">
+                    <i class="fa-solid fa-plane-departure" style="font-size: 2rem;"></i>
+                    <div class="logo-text">
+                        <span>FRANCELINO</span> TURISMO<br>
+                        <small>| AGÊNCIA DE VIAGENS</small>
+                    </div>
+                </a>
+                
+                <nav class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#aereos" class="nav-link"><i class="fa-solid fa-plane" style="transform: rotate(-45deg);"></i> Aéreos</a></li>
+                        <li><a href="#rodoviarios" class="nav-link"><i class="fa-solid fa-bus"></i> Rodoviários</a></li>
+                        <li><a href="#cruzeiros" class="nav-link"><i class="fa-solid fa-ship"></i> Cruzeiros</a></li>
+                        <li><a href="#servicos" class="nav-link"><i class="fa-solid fa-address-card"></i> Serviços</a></li>
+                        <li><a href="/promocao/" class="nav-link"><i class="fa-solid fa-tag"></i> Promoções</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="header-actions">
+            <div class="nav-search">
+                <input type="text" placeholder="Buscar destino ou pacote...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="#" class="header-wa-btn"><i class="fa-brands fa-whatsapp"></i></a>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/agencia-hero.png" alt="Cenário Paradisíaco" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Descubra o Mundo com <span>Conforto e Segurança</span></h1>
+            <p>Os melhores pacotes aéreos, rodoviários e cruzeiros para a sua próxima aventura inesquecível.</p>
+            
+            <div class="hero-search-box">
+                <form class="search-form">
+                    <div class="input-group">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Para onde você quer ir?">
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <input type="text" placeholder="Quando?">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Buscar Pacotes</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pacotes Aéreos -->
+    <section id="aereos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-plane"></i> Pacotes Aéreos</h2>
+                <p>Destinos incríveis pelo Brasil e pelo mundo com o suporte completo da Francelino Turismo.</p>
+            </div>
+            
+            <div class="grid cards-grid">
+                <!-- Card 1 -->
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="/agencia-flight.png" alt="Fortaleza e Beach Park">
+                        <span class="badge">Mais Vendido</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Fortaleza + 1 dia de Beach Park</h3>
+                        <div class="card-info">
+                            <span><i class="fa-regular fa-calendar"></i> 12 a 18 Nov 2026</span>
+                            <span><i class="fa-solid fa-clock"></i> 7 Dias</span>
+                        </div>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Fortaleza, CE</p>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 2.490</span>
+                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Fake Card 2 -->
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=600&q=80" alt="Maceió">
+                    </div>
+                    <div class="card-body">
+                        <h3>Encantos de Maceió e Maragogi</h3>
+                        <div class="card-info">
+                            <span><i class="fa-regular fa-calendar"></i> 05 a 10 Dez 2026</span>
+                            <span><i class="fa-solid fa-clock"></i> 5 Dias</span>
+                        </div>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Alagoas, AL</p>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 1.950</span>
+                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Fake Card 3 -->
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80" alt="Buenos Aires">
+                        <span class="badge badge-international">Internacional</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Buenos Aires Clássica</h3>
+                        <div class="card-info">
+                            <span><i class="fa-regular fa-calendar"></i> 20 a 24 Jan 2027</span>
+                            <span><i class="fa-solid fa-clock"></i> 4 Dias</span>
+                        </div>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Argentina</p>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 3.100</span>
+                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pacotes Rodoviários -->
+    <section id="rodoviarios" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-bus-simple"></i> Pacotes Rodoviários</h2>
+                <p>Conforto e segurança pelas melhores rodovias em nossos ônibus modernos.</p>
+            </div>
+            
+            <div class="grid cards-grid">
+                <!-- Card 1 -->
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1543781525-2fa7883395c5?auto=format&fit=crop&w=600&q=80" alt="Gramado e Canela">
+                    </div>
+                    <div class="card-body">
+                        <h3>Gramado e Canela – ChocoPáscoa 2026</h3>
+                        <div class="card-info">
+                            <span><i class="fa-regular fa-calendar"></i> 02 a 06 Abr 2026</span>
+                            <span><i class="fa-solid fa-clock"></i> 5 Dias</span>
+                        </div>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Rio Grande do Sul</p>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 1.250</span>
+                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1563220494-b772cfff7e12?auto=format&fit=crop&w=600&q=80" alt="Foz do Iguaçu">
+                    </div>
+                    <div class="card-body">
+                        <h3>Maravilhas de Foz do Iguaçu</h3>
+                        <div class="card-info">
+                            <span><i class="fa-regular fa-calendar"></i> 10 a 14 Mai 2026</span>
+                            <span><i class="fa-solid fa-clock"></i> 4 Dias</span>
+                        </div>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Paraná</p>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 980</span>
+                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80" alt="Beto Carrero">
+                    </div>
+                    <div class="card-body">
+                        <h3>Diversão no Beto Carrero World</h3>
+                        <div class="card-info">
+                            <span><i class="fa-regular fa-calendar"></i> Finais de Semana</span>
+                            <span><i class="fa-solid fa-clock"></i> 2 Dias</span>
+                        </div>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Santa Catarina</p>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 650</span>
+                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cruzeiros -->
+    <section id="cruzeiros" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-ship"></i> Cruzeiros</h2>
+                <p>Navegue por águas nacionais e internacionais com luxo e all-inclusive.</p>
+            </div>
+            
+            <div class="grid cards-grid">
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="/agencia-cruise.png" alt="Mini Cruzeiro">
+                        <span class="badge badge-cruise">Nacional</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Mini Cruzeiro – Costa Diadema</h3>
+                        <div class="card-info">
+                            <span><i class="fa-solid fa-anchor"></i> Santos, Búzios, Ilhabela</span>
+                            <span><i class="fa-solid fa-clock"></i> 4 Noites</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 3.500</span>
+                            <span class="price-cond">por pessoa | Entrada + 12x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1601053153579-2476b7bd4bda?auto=format&fit=crop&w=600&q=80" alt="Caribe">
+                        <span class="badge badge-international">Internacional</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Caribe Fascinante - MSC Seascape</h3>
+                        <div class="card-info">
+                            <span><i class="fa-solid fa-anchor"></i> Miami, Bahamas, Jamaica</span>
+                            <span><i class="fa-solid fa-clock"></i> 7 Noites</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-label">A partir de</span>
+                            <span class="price-value">R$ 8.900</span>
+                            <span class="price-cond">por pessoa | Entrada + 12x sem juros</span>
+                        </div>
+                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frota -->
+    <section id="frota" class="section fleet-section">
+        <div class="container">
+            <div class="grid fleet-grid">
+                <div class="fleet-content">
+                    <h2>Conheça nossa <span>Frota VIP</span></h2>
+                    <p>Viaje com o máximo de conforto, segurança e pontualidade. Nossos veículos passam por rigorosas manutenções para garantir a melhor experiência na estrada.</p>
+                    <ul class="fleet-features">
+                        <li><i class="fa-solid fa-check"></i> Ônibus Leito e Semi-Leito</li>
+                        <li><i class="fa-solid fa-check"></i> Wi-Fi, USB e Ar Condicionado</li>
+                        <li><i class="fa-solid fa-check"></i> Assentos reclináveis ergonômicos (até 42 lugares)</li>
+                        <li><i class="fa-solid fa-check"></i> Rastreadores de última geração</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary">Solicitar Cotação para Grupos</a>
+                </div>
+                <div class="fleet-image">
+                    <img src="/agencia-bus.png" alt="Nossa Frota">
+                    <div class="fleet-card-float">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Viagem Segura Garantida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Adicionais -->
+    <section id="servicos" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-briefcase"></i> Serviços Adicionais</h2>
+                <p>Tudo o que você precisa para uma viagem sem preocupações, em um só lugar.</p>
+            </div>
+            
+            <div class="grid services-grid">
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-passport"></i></div>
+                    <h3>Passaportes e Vistos</h3>
+                    <p>Assessoria completa para emissão ou renovação de passaporte e vistos consulares.</p>
+                    <a href="#" class="btn btn-sm btn-outline">Contratar</a>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-car"></i></div>
+                    <h3>Aluguel de Carros</h3>
+                    <p>Parcerias com as melhores locadoras para você ter liberdade no seu destino.</p>
+                    <a href="#" class="btn btn-sm btn-outline">Contratar</a>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-house-medical"></i></div>
+                    <h3>Seguro Viagem</h3>
+                    <p>Viaje protegido contra imprevistos de saúde e bagagem extraviada.</p>
+                    <a href="#" class="btn btn-sm btn-outline">Contratar</a>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-ticket"></i></div>
+                    <h3>Ingressos Disney & Parques</h3>
+                    <p>Compre ingressos antecipados para os principais parques temáticos do mundo.</p>
+                    <a href="#" class="btn btn-sm btn-outline">Contratar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section id="parceiros" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Parceiros</h2>
+            </div>
+            <div class="partners-logo-wrap">
+                <!-- Mock Partner Logos with FontAwesome inside circles or text -->
+                <div class="partner-logo"><span class="partner-text">LATAM</span></div>
+                <div class="partner-logo"><span class="partner-text">GOL</span></div>
+                <div class="partner-logo"><span class="partner-text">AZUL</span></div>
+                <div class="partner-logo"><span class="partner-text">MSC CRUZEIROS</span></div>
+                <div class="partner-logo"><span class="partner-text">COSTA</span></div>
+                <div class="partner-logo"><span class="partner-text">LOCALIZA</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Full Width -->
+    <section class="whatsapp-cta-section">
+        <div class="container whatsapp-container">
+            <div class="wa-content">
+                <h2>Receba Ofertas Exclusivas no seu WhatsApp!</h2>
+                <p>Junte-se ao nosso grupo VIP e seja o primeiro a saber das melhores promoções, passagens imperdíveis e pacotes de última hora.</p>
+                <a href="#" class="btn btn-wa-large"><i class="fa-brands fa-whatsapp"></i> Entrar no Grupo VIP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-plane-departure"></i> Francelino<span>Turismo</span>
+                    </a>
+                    <p>A sua agência de confiança para transformar seus sonhos de viagem em realidade, com segurança e preços imperdíveis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#aereos">Pacotes Aéreos</a></li>
+                        <li><a href="#rodoviarios">Excursões Rodoviárias</a></li>
+                        <li><a href="#cruzeiros">Cruzeiros</a></li>
+                        <li><a href="#servicos">Serviços Adicionais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> Av. das Viagens, 1234 - Centro</li>
+                        <li><i class="fa-solid fa-phone"></i> (11) 9999-9999</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> (11) 98888-8888</li>
+                        <li><i class="fa-solid fa-envelope"></i> reservas@viajamundo.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Francelino Turismo Agência de Viagens - Todos os direitos reservados. Confie na nossa agência!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="floating-wa" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="/agencia-main.js"></script>
+
+    <!-- Netlify Identity Script -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+        // ESTA É A CHAVE MESTRA:
+        window.netlifyIdentity.setAPIUrl('https://monumental-profiterole-1a8105.netlify.app/.netlify/identity');
+        window.netlifyIdentity.setLocale('pt');
+      }
+    </script>
+
+</body>
+</html>

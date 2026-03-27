@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Controle - Francelino Turismo</title>
+    <!-- Inclui o script de identidade do Netlify -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <!-- Script do CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Força a conexão com o seu domínio interno do Netlify para evitar redirecionamento para o manual
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+        // ESTA É A CHAVE MESTRA:
+        window.netlifyIdentity.setAPIUrl('https://monumental-profiterole-1a8105.netlify.app/.netlify/identity');
+        window.netlifyIdentity.setLocale('pt');
+      }
+    </script>
+  </body>
+</html>

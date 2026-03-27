@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortaleza + Beach Park | ViajaMundo</title>
+    <link rel="stylesheet" href="/agencia-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            margin-top: 80px;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        }
+        .page-header-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: 1;
+        }
+        .page-header-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(14, 72, 123, 0.9), transparent);
+            z-index: 2;
+        }
+        .page-header-content {
+            position: relative; z-index: 3; color: white;
+        }
+        .page-header-content h1 {
+            color: white; font-size: 3rem; margin-bottom: 10px;
+        }
+        .breadcrumb {
+            color: #ddd; font-size: 0.9rem;
+        }
+        .breadcrumb a { color: var(--secondary-color); }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 60px 0;
+        }
+        .details-content h2 { margin: 30px 0 15px; color: var(--primary-color); }
+        .details-content p { color: var(--text-light); margin-bottom: 15px; }
+        .details-list { margin-bottom: 20px; }
+        .details-list li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;}
+        .details-list i { color: var(--secondary-color); margin-top: 5px; }
+        
+        .booking-card {
+            background: white; border-radius: var(--border-radius);
+            padding: 30px; box-shadow: var(--shadow-hover);
+            border: 1px solid var(--border-color);
+            position: sticky; top: 100px;
+        }
+        .booking-price { font-size: 2.5rem; color: var(--primary-color); font-weight: 800; line-height: 1; margin: 10px 0;}
+        .booking-card .btn { margin-top: 20px; font-size: 1.1rem; }
+        
+        @media(max-width: 900px) {
+            .details-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header" style="box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-plane-departure"></i> Viaja<span>Mundo</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#aereos" class="nav-link">Aéreos</a></li>
+                    <li><a href="index.html#rodoviarios" class="nav-link">Rodoviários</a></li>
+                    <li><a href="index.html#cruzeiros" class="nav-link">Cruzeiros</a></li>
+                    <li><a href="index.html#frota" class="nav-link">Nossa Frota</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <img src="/Users/luiz/.gemini/antigravity/brain/a649d6d4-8090-4955-8cf5-d947839bc2b6/flight_package_1774478006204.png" class="page-header-bg" alt="Fortaleza">
+        <div class="page-header-overlay"></div>
+        <div class="container page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &raquo; Pacotes Aéreos &raquo; Fortaleza
+            </div>
+            <h1>Fortaleza + 1 dia de Beach Park</h1>
+            <p><i class="fa-solid fa-location-dot"></i> Fortaleza, Ceará, Brasil</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="details-grid">
+            <!-- Coluna de Detalhes -->
+            <div class="details-content">
+                <h2>Roteiro Inesquecível</h2>
+                <p>Misture o lazer das belíssimas praias de Fortaleza com a adrenalina do maior parque aquático da América Latina! Este pacote foi desenhado para famílias e casais que buscam uma experiência fantástica de sol, cultura, gastronomia e muita diversão.</p>
+                <p>Desfrute das noites animadas na feirinha da Beira-Mar e mergulhe nas águas quentes do litoral cearense.</p>
+
+                <h2>Serviços Inclusos</h2>
+                <ul class="details-list">
+                    <li><i class="fa-solid fa-check"></i> Passagem aérea de ida e volta saindo das principais capitais.</li>
+                    <li><i class="fa-solid fa-check"></i> 6 noites de hospedagem em hotel 4 estrelas com café da manhã.</li>
+                    <li><i class="fa-solid fa-check"></i> Traslados de chegada e saída (Aeroporto/Hotel/Aeroporto).</li>
+                    <li><i class="fa-solid fa-check"></i> Ingresso para 1 dia completo no Beach Park.</li>
+                    <li><i class="fa-solid fa-check"></i> Traslado Hotel/Beach Park/Hotel.</li>
+                    <li><i class="fa-solid fa-check"></i> City Tour guiado pelos principais pontos turísticos.</li>
+                </ul>
+
+                <h2>Notas e Condições Gerais</h2>
+                <ul class="details-list">
+                    <li><i class="fa-solid fa-circle-exclamation"></i> <strong>Documentação:</strong> Obrigatório apresentação de RG original ou CNH dentro da validade para o embarque.</li>
+                    <li><i class="fa-solid fa-circle-exclamation"></i> <strong>Cancelamentos:</strong> Conforme política da Anac e do operador turístico, sujeito a multas tarifárias se houver cancelamento com menos de 30 dias.</li>
+                    <li><i class="fa-solid fa-circle-exclamation"></i> <strong>Acomodação:</strong> Preço base para apartamento duplo. Consulte adicionais para single.</li>
+                </ul>
+            </div>
+
+            <!-- Coluna de Compra/Reserva -->
+            <div>
+                <div class="booking-card">
+                    <p style="color: var(--text-light); text-transform: uppercase; font-weight: 700; font-size: 0.9rem;">Valor por pessoa</p>
+                    <div class="booking-price">R$ 2.490</div>
+                    <p style="color: var(--text-light); border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 15px;">
+                        Em até <strong>10x de R$ 249,00</strong> sem juros no cartão de crédito.
+                    </p>
+                    
+                    <ul class="details-list" style="font-size: 0.9rem;">
+                        <li><i class="fa-regular fa-calendar"></i> Embarque: 12/Nov/2026</li>
+                        <li><i class="fa-regular fa-calendar-check"></i> Retorno: 18/Nov/2026</li>
+                        <li><i class="fa-solid fa-clock"></i> Duração: 7 Dias</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary btn-full"><i class="fa-brands fa-whatsapp"></i> Reservar via WhatsApp</a>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: var(--text-light);">Atendimento rápido e personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Simple -->
+    <footer class="footer" style="padding: 30px 0; margin-top: 0;">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 ViajaMundo Agência de Viagens.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

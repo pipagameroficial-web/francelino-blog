@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Tag Manager -->
+    <!-- Substitua 'GTM-XXXXXXX' pelo seu código do GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Verificação do Google Search Console -->
+    <!-- Insira aqui a tag HTML fornecida pelo Search Console -->
+    <meta name="google-site-verification" content="Sua_Tag_Aqui" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TÍTULO DA POSTAGEM PARA SEO -->
+    <title>{{ title }} - Francelino Turismo</title>
+    
+    <!-- DESCRIÇÃO DA POSTAGEM PARA SEO -->
+    <meta name="description" content="{{ description }}">
+    
+    <link rel="stylesheet" href="/style.css?v=1.2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- Substitua 'GTM-XXXXXXX' pelo seu código do GTM -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="bg-canvas"></div>
+    <div class="glow-overlay"></div>
+
+    <main>
+        <!-- CABEÇALHO DO BLOG -->
+        <header class="blog-header">
+            <div class="container">
+                <!-- TÍTULO DA PÁGINA -->
+                <h1>{{ title }}</h1>
+            </div>
+            <div class="glow-overlay"></div>
+        </header>
+
+        <!-- CONTEÚDO DO ARTIGO -->
+        <section class="blog-content">
+            <div class="container">
+                <article class="blog-article">
+                    {{ content | safe }}
+                    
+                    <div style="text-align: center; margin-top: 50px;">
+                        <a href="/" class="btn-yellow-solid">RETORNAR À PÁGINA INICIAL</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="/logo.png" alt="Francelino Turismo" class="footer-logo-img">
+                <p>Especialista em Tríplice Fronteira<br>e Compras no Paraguai.</p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/francelinoturismo" target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <a href="https://tiktok.com/@francelinoturismo" target="_blank" class="social-icon" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.83a8.18 8.18 0 0 0 4.77 1.52V6.88a4.85 4.85 0 0 1-1-.19z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contatos</h3>
+                <p>WhatsApp: +55 11 95422-9997</p>
+                <p>Telefone: +55 11 4444-4444</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Horário</h3>
+                <p>Segunda - Sexta: 09:00 - 18:00</p>
+                <p>Sábado: 09:00 - 13:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Francelino Turismo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

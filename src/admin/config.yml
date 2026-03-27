@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/uploads" # Imagens do blog ficarão aqui
+public_folder: "uploads" # URL das imagens chamará esta pasta
+
+collections:
+  - name: "blog"
+    label: "Artigos do Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout Oculto", name: "layout", widget: "hidden", default: "blog.njk"}
+      - {label: "Título do Artigo", name: "title", widget: "string"}
+      - {label: "Resumo para o Google (SEO)", name: "description", widget: "string"}
+      - {label: "Data de Publicação", name: "date", widget: "datetime"}
+      - {label: "Texto do Artigo", name: "body", widget: "markdown"}
