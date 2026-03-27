@@ -109,13 +109,39 @@
             </div>
         </div>
     </section>
+    <header class="top-header">
+        <div class="header-container">
+            <a href="/" class="logo-area">
+                <img src="/logo.png" alt="Logo" style="height: 40px; filter: brightness(0) invert(1);">
+                <div>
+                    <strong>FRANCELINO</strong> TURISMO<br>
+                    <small>AGÊNCIA DE VIAGENS</small>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#aereos"><i class="fa-solid fa-plane"></i> Aéreos</a></li>
+                    <li><a href="#rodoviarios"><i class="fa-solid fa-bus"></i> Rodoviários</a></li>
+                    <li><a href="#cruzeiros"><i class="fa-solid fa-ship"></i> Cruzeiros</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div style="background: rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; color: white;">
+                    Buscar destino... <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="https://wa.me/{{ settings.whatsapp }}" style="background: var(--success-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Pacotes Aéreos -->
+    <!-- Seção de Aéreos -->
     <section id="aereos" class="section">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fa-solid fa-plane"></i> Pacotes Aéreos</h2>
-                <p>Destinos incríveis pelo Brasil e pelo mundo com o suporte completo da Francelino Turismo.</p>
+                <h2><i class="fa-solid fa-plane-up"></i> Pacotes Aéreos</h2>
+                <p>As melhores tarifas e destinos internacionais preparados para você.</p>
             </div>
             
             <div class="grid cards-grid">
@@ -132,7 +158,7 @@
                     <div class="card-body">
                         <h3>{{ pacote.data.title }}</h3>
                         <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> {{ pacote.data.date_range }}</span>
+                            <span><i class="fa-regular fa-calendar"></i> {{ pacote.data.dates.display | default(pacote.data.date_range) }}</span>
                             <span><i class="fa-solid fa-clock"></i> {{ pacote.data.duration }}</span>
                         </div>
                         <p class="destination"><i class="fa-solid fa-location-dot"></i> {{ pacote.data.location }}</p>
@@ -173,7 +199,7 @@
                     <div class="card-body">
                         <h3>{{ pacote.data.title }}</h3>
                         <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> {{ pacote.data.date_range }}</span>
+                            <span><i class="fa-regular fa-calendar"></i> {{ pacote.data.dates.display | default(pacote.data.date_range) }}</span>
                             <span><i class="fa-solid fa-clock"></i> {{ pacote.data.duration }}</span>
                         </div>
                         <p class="destination"><i class="fa-solid fa-location-dot"></i> {{ pacote.data.location }}</p>

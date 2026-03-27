@@ -48,19 +48,31 @@ collections:
     fields:
       - {label: "Layout Oculto", name: "layout", widget: "hidden", default: "pacote.njk"}
       - {label: "Título do Pacote", name: "title", widget: "string"}
-      - {label: "Imagem de Destaque", name: "image", widget: "image"}
-      - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [
-          {label: "Texto", name: "text", widget: "string", required: false},
-          {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho"], default: "Azul"}
-      ]}
-      - {label: "Data da Viagem (Texto)", name: "date_range", widget: "string"}
-      - {label: "Data de Início (Para o Calendário)", name: "start_date", widget: "datetime", required: false}
-      - {label: "Duração", name: "duration", widget: "string"}
-      - {label: "Destino", name: "location", widget: "string"}
-      - {label: "Preço (apenas número)", name: "price", widget: "string"}
-      - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Em até 10x sem juros"}
+      - {label: "Selo de Categoria (ex: Nacional, Internacional)", name: "category", widget: "string", default: "Nacional"}
+      - {label: "Imagem de Destaque PRINCIPAL", name: "image", widget: "image"}
+      - {label: "📸 Galeria de Imagens (Obrigatório completar as 6 para o novo design)", name: "gallery", widget: "object", fields: [
+          {label: "Imagem 1", name: "img1", widget: "image"},
+          {label: "Imagem 2", name: "img2", widget: "image"},
+          {label: "Imagem 3", name: "img3", widget: "image"},
+          {label: "Imagem 4", name: "img4", widget: "image"},
+          {label: "Imagem 5", name: "img5", widget: "image"},
+          {label: "Imagem 6", name: "img6", widget: "image"}
+        ]}
+      - {label: "Selo do Card (ex: Promoção)", name: "badge", widget: "object", fields: [
+          {label: "Texto", name: "text", widget: "string"},
+          {label: "Cor", name: "color", widget: "select", options: ["Laranja", "Azul", "Verde"]}
+        ]}
+      - {label: "📅 Datas", name: "dates", widget: "object", fields: [
+          {label: "Data de Saída", name: "departure", widget: "datetime", format: "DD/MM/YYYY"},
+          {label: "Data de Retorno", name: "return", widget: "datetime", format: "DD/MM/YYYY"},
+          {label: "Texto livre da data (ex: 10 a 14 Mai)", name: "display", widget: "string"}
+        ]}
+      - {label: "Duração (ex: 5 Dias)", name: "duration", widget: "string"}
+      - {label: "Localização (ex: Rio de Janeiro, RJ)", name: "location", widget: "string"}
+      - {label: "💰 Preço (A partir de)", name: "price", widget: "string"}
+      - {label: "Condição (ex: em até 10x sem juros)", name: "price_cond", widget: "string"}
       - {label: "Link Personalizado", name: "link", widget: "string", required: false}
-      - {label: "Descrição/Itinerário Detalhado", name: "body", widget: "markdown", required: false}
+      - {label: "📝 Roteiro Detalhado (Dia a Dia)", name: "body", widget: "markdown"}
 
   - name: "cruzeiros"
     label: "🚢 Cruzeiros"

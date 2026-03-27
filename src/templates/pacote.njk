@@ -1,36 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    {% if settings.gtm_id %}
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&lLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','{{ settings.gtm_id }}');</script>
-    <!-- End Google Tag Manager -->
-    {% endif %}
-
-    {% if settings.google_analytics_id %}
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ settings.google_analytics_id }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ settings.google_analytics_id }}');
-    </script>
-    <!-- End Google Analytics -->
-    {% endif %}
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Francelino Turismo</title>
     
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="/agencia-style.css?v=2.0">
-    
-    <!-- Fonts -->
+    <link rel="stylesheet" href="/agencia-style.css?v=4.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,333 +13,268 @@
     
     <style>
         :root {
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --glass-border: rgba(255, 255, 255, 0.18);
-            --navy: #0E487B;
-            --orange: #F89C1D;
+            --primary-navy: #1A1A1A;
+            --accent-orange: #F89C1D;
+            --success-green: #00D136;
+            --bg-gray: #F4F7F6;
+            --text-gray: #666666;
+            --white: #FFFFFF;
         }
 
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
+            background-color: var(--bg-gray);
             margin: 0;
-            padding: 0;
+            color: #333;
         }
 
-        .premium-nav {
-            background: rgba(38, 33, 30, 0.95);
-            backdrop-filter: blur(10px);
+        .header-top {
+            background: #1A1A1A;
+            color: white;
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .nav-container {
+        .container-wide {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
         }
 
-        .nav-logo-text {
-            color: white;
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
-
-        .nav-logo-text span { color: var(--orange); }
-
-        .package-hero {
-            height: 60vh;
-            min-height: 500px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('{{ image }}');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            max-width: 900px;
-            padding: 0 20px;
-        }
-
-        .breadcrumb {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 15px;
-        }
-
-        .main-grid {
+        .main-layout {
             max-width: 1200px;
-            margin: -80px auto 100px;
+            margin: 40px auto;
             display: grid;
             grid-template-columns: 1fr 380px;
-            gap: 30px;
+            gap: 40px;
             padding: 0 20px;
-            position: relative;
-            z-index: 10;
         }
 
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+        /* Galeria Estilo Gadotti */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 25px 0 40px;
         }
 
-        .sidebar-card {
-            background: var(--navy);
-            border-radius: 24px;
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Sidebar Info Box */
+        .info-sidebar {
+            background: white;
+            border-radius: 20px;
             padding: 35px;
-            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             position: sticky;
             top: 100px;
-            box-shadow: 0 20px 40px rgba(14, 72, 123, 0.25);
         }
 
-        .info-strip {
+        .date-row {
             display: flex;
-            gap: 25px;
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e2e8f0;
-            flex-wrap: wrap;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 500;
-            color: #64748b;
-        }
-
-        .info-item i {
-            font-size: 1.2rem;
-            color: var(--navy);
-        }
-
-        .itinerary-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--navy);
+            justify-content: space-between;
             margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #EEE;
+        }
+
+        .date-item span {
+            display: block;
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .date-item strong {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 8px;
+            font-size: 0.95rem;
         }
 
-        .itinerary-title::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: #e2e8f0;
+        .price-section {
+            margin: 30px 0;
         }
 
-        .itinerary-body {
-            line-height: 1.8;
-            font-size: 1.15rem;
-            color: #334155;
-        }
-
-        .itinerary-body ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .itinerary-body li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        .itinerary-body li::before {
-            content: '\f058';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--orange);
-        }
-
-        .price-tag {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .price-label { font-size: 0.9rem; opacity: 0.8; }
-        .price-amount { 
-            font-size: 2.8rem; 
+        .price-section .label { font-size: 0.9rem; color: #666; }
+        .price-section .value { 
+            display: block; 
+            font-size: 2.2rem; 
             font-weight: 800; 
-            color: var(--orange); 
-            display: block;
+            color: #1A1A1A; 
             margin: 5px 0;
         }
 
-        .btn-booking {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: var(--orange);
+        .btn-comprar {
+            display: block;
+            background: var(--success-green);
             color: white;
-            text-decoration: none;
+            text-align: center;
             padding: 20px;
-            border-radius: 12px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 700;
             font-size: 1.2rem;
-            transition: transform 0.3s ease, background 0.3s ease;
-            box-shadow: 0 10px 20px rgba(248, 156, 29, 0.3);
+            transition: transform 0.2s ease, background 0.2s ease;
         }
 
-        .btn-booking:hover {
+        .btn-comprar:hover {
             transform: translateY(-3px);
-            background: #e08b15;
+            background: #00B52F;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        .feature-box {
+        .itinerary-card {
             background: white;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
         }
 
-        .feature-box i {
-            font-size: 1.5rem;
-            color: var(--navy);
-            margin-bottom: 10px;
+        .footer-premium {
+            background: #FFFFFF;
+            padding: 80px 0 40px;
+            border-top: 1px solid #EEE;
+            margin-top: 80px;
         }
-
-        .feature-box h4 { margin: 0; font-size: 0.9rem; }
 
         @media (max-width: 992px) {
-            .main-grid { grid-template-columns: 1fr; margin-top: -40px; }
-            .hero-content h1 { font-size: 2.2rem; }
-            .sidebar-card { position: static; }
+            .main-layout { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="premium-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo-text"><span>FRANCELINO</span> TURISMO</a>
-            <a href="/" style="color: white; text-decoration: none; font-weight: 500;"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-        </div>
-    </nav>
-
-    <div class="package-hero">
-        <div class="hero-content">
-            <div class="breadcrumb">
-                <span>Início</span> / <span>Pacotes</span> / <span>{{ title }}</span>
+    <header class="header-top">
+        <div class="container-wide">
+            <a href="/" style="color: white; text-decoration: none; font-weight: 800; font-size: 1.4rem;">
+                FRANCELINO <span style="color: var(--accent-orange);">TURISMO</span>
+            </a>
+            <div style="display: flex; gap: 20px; align-items: centre;">
+                <div style="background: rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 50px; font-size: 0.9rem;">
+                    Buscar destino... <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="https://wa.me/{{ settings.whatsapp }}" style="color: white; font-size: 1.5rem;"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-            <h1>{{ title }}</h1>
         </div>
-    </div>
+    </header>
 
-    <main class="main-grid">
-        <div class="glass-card">
-            <div class="info-strip">
-                <div class="info-item"><i class="fa-regular fa-calendar-check"></i> {{ date_range }}</div>
-                <div class="info-item"><i class="fa-solid fa-hourglass-half"></i> {{ duration }}</div>
-                {% if location %}
-                <div class="info-item"><i class="fa-solid fa-map-location-dot"></i> {{ location }}</div>
-                {% endif %}
-                {% if itinerary %}
-                <div class="info-item"><i class="fa-solid fa-ship"></i> {{ itinerary }}</div>
-                {% endif %}
+    <main class="main-layout">
+        <div class="content-main">
+            <div style="font-size: 0.85rem; color: #999; margin-bottom: 20px;">
+                Home • Pacotes • {{ category | default('Nacional') }}
             </div>
-
-            <h2 class="itinerary-title"><i class="fa-solid fa-route"></i> Roteiro Completo</h2>
             
-            <div class="itinerary-body">
-                {{ content | safe }}
-                
-                {% if not content %}
-                <p>Nossa equipe está finalizando os detalhes deste roteiro. Entre em contato para receber o itinerário em PDF de forma antecipada!</p>
-                {% endif %}
+            <h1 style="font-size: 2.5rem; margin-bottom: 10px;">{{ title }}</h1>
+            <div style="background: #1A1A1A; color: white; display: inline-block; padding: 4px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">
+                <i class="fa-solid fa-tags"></i> {{ category | default('Nacional') }}
             </div>
 
-            <div class="features-grid">
-                <div class="feature-box">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Seguro Viagem</h4>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-headset"></i>
-                    <h4>Suporte 24h</h4>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-bus"></i>
-                    <h4>Transporte VIP</h4>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-star"></i>
-                    <h4>Guia Experiente</h4>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="{{ gallery.img1 | default(image) }}" alt="Foto 1"></div>
+                <div class="gallery-item"><img src="{{ gallery.img2 | default(image) }}" alt="Foto 2"></div>
+                <div class="gallery-item"><img src="{{ gallery.img3 | default(image) }}" alt="Foto 3"></div>
+                <div class="gallery-item"><img src="{{ gallery.img4 | default(image) }}" alt="Foto 4"></div>
+                <div class="gallery-item"><img src="{{ gallery.img5 | default(image) }}" alt="Foto 5"></div>
+                <div class="gallery-item"><img src="{{ gallery.img6 | default(image) }}" alt="Foto 6"></div>
+            </div>
+
+            <div class="itinerary-card">
+                <h2 style="font-size: 1.6rem; border-bottom: 2px solid #F4F7F6; padding-bottom: 15px; margin-bottom: 25px;">Detalhes do Pacote</h2>
+                <div style="line-height: 1.8; font-size: 1.1rem;">
+                    {{ content | safe }}
                 </div>
             </div>
         </div>
 
-        <aside class="package-sidebar">
-            <div class="sidebar-card">
-                <div class="price-tag">
-                    <span class="price-label">Valor do Investimento</span>
-                    <span class="price-amount">R$ {{ price }}</span>
-                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">{{ price_cond }}</p>
+        <aside class="sidebar-info">
+            <div class="info-sidebar">
+                <h3 style="margin-top: 0; font-size: 1.4rem; margin-bottom: 25px;">Informações</h3>
+                
+                <div class="date-row">
+                    <div class="date-item">
+                        <span>SAÍDA</span>
+                        <strong><i class="fa-regular fa-calendar" style="color: var(--accent-orange);"></i> {{ dates.departure | default('Consultar') }}</strong>
+                    </div>
+                    <div class="date-item">
+                        <span>RETORNO</span>
+                        <strong><i class="fa-regular fa-calendar" style="color: var(--accent-orange);"></i> {{ dates.return | default('Consultar') }}</strong>
+                    </div>
                 </div>
 
-                <p style="margin-bottom: 25px; font-size: 0.95rem; line-height: 1.6; text-align: center; opacity: 0.9;">
-                    Garanta sua vaga agora mesmo e parcele sua viagem em condições exclusivas. Atendimento imediato via WhatsApp.
-                </p>
+                <div class="price-section">
+                    <span class="label">A partir de:</span>
+                    <span class="value">R$ {{ price }}</span>
+                    <span style="font-size: 0.85rem; color: #999;">{{ price_cond }}</span>
+                </div>
 
-                {% set wa_message = "Olá! Tenho interesse no pacote: " + title + ". Gostaria de mais informações e disponibilidade." %}
-                <a href="https://wa.me/{{ settings.whatsapp }}?text={{ wa_message | urlencode }}" class="btn-booking" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> FALAR COM CONSULTOR
+                {% set wa_message = "Olá! Gostaria de comprar o pacote: " + title %}
+                <a href="https://wa.me/{{ settings.whatsapp }}?text={{ wa_message | urlencode }}" class="btn-comprar">
+                    COMPRAR
                 </a>
 
-                <div style="margin-top: 30px; text-align: center; font-size: 0.85rem; opacity: 0.7;">
-                    <i class="fa-solid fa-lock"></i> Pagamento 100% Seguro
+                <div style="text-align: center; margin-top: 25px;">
+                    <a href="https://wa.me/{{ settings.whatsapp }}" style="text-decoration: none; color: #333; font-weight: 500; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="fa-brands fa-whatsapp" style="color: var(--success-green); font-size: 1.2rem;"></i> Precisa de ajuda? Clique aqui
+                    </a>
                 </div>
             </div>
         </aside>
     </main>
 
-    <footer style="background: #26211E; color: white; padding: 60px 0 30px; text-align: center; border-top: 4px solid var(--orange);">
-        <div class="container">
-            <img src="/logo.png" alt="Logo" style="height: 50px; margin-bottom: 20px; filter: brightness(0) invert(1);">
-            <p style="opacity: 0.7;">© 2026 Francelino Turismo. Todos os direitos reservados.</p>
+    <footer class="footer-premium">
+        <div class="container-wide" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px;">
+            <div>
+                <h3 style="margin-bottom: 20px;">Sua confiança é o que nos move</h3>
+                <div style="display: flex; gap: 15px; font-size: 1.5rem;">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div>
+                <h4 style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">Pacotes</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">Aéreos</li>
+                    <li style="margin-bottom: 10px;">Rodoviários</li>
+                    <li style="margin-bottom: 10px;">Cruzeiros</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">Serviços</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;">Vistos</li>
+                    <li style="margin-bottom: 10px;">Passaportes</li>
+                    <li style="margin-bottom: 10px;">Seguro Viagem</li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">Contato</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-phone"></i> {{ settings.whatsapp }}</li>
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-envelope"></i> contato@francelinoturismo.com.br</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 60px; font-size: 0.8rem; color: #BBB;">
+            © 2026 - Francelino Turismo. Todos os direitos reservados.
         </div>
     </footer>
 
