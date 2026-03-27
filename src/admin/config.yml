@@ -24,6 +24,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Layout Oculto", name: "layout", widget: "hidden", default: "pacote.njk"}
       - {label: "Título do Pacote", name: "title", widget: "string"}
       - {label: "Imagem de Destaque", name: "image", widget: "image"}
       - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [
@@ -45,6 +46,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Layout Oculto", name: "layout", widget: "hidden", default: "pacote.njk"}
       - {label: "Título do Pacote", name: "title", widget: "string"}
       - {label: "Imagem de Destaque", name: "image", widget: "image"}
       - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [
@@ -66,6 +68,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Layout Oculto", name: "layout", widget: "hidden", default: "pacote.njk"}
       - {label: "Título do Cruzeiro", name: "title", widget: "string"}
       - {label: "Imagem de Destaque", name: "image", widget: "image"}
       - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [

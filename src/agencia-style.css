@@ -437,13 +437,21 @@ h1, h2, h3, h4, h5 {
 .badge {
     position: absolute;
     top: 15px;
-    left: 15px;
-    background: var(--secondary-color);
-    color: var(--white);
-    padding: 5px 12px;
-    border-radius: 20px;
+    right: 15px;
+    padding: 6px 15px;
+    border-radius: 50px;
     font-size: 0.8rem;
     font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    /* Segurança para textos longos */
+    max-width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .badge-blue { background: var(--primary-color); }
