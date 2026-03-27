@@ -78,7 +78,7 @@
                 <input type="text" placeholder="Buscar destino ou pacote...">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <a href="#" class="header-wa-btn"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/{{ settings.whatsapp }}" class="header-wa-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             
             <div class="mobile-toggle" id="mobile-toggle">
                 <i class="fa-solid fa-bars"></i>
@@ -119,70 +119,35 @@
             </div>
             
             <div class="grid cards-grid">
-                <!-- Card 1 -->
+                {% for pacote in collections.pacotes_aereos %}
                 <div class="package-card">
                     <div class="card-img-wrapper">
-                        <img src="/agencia-flight.png" alt="Fortaleza e Beach Park">
-                        <span class="badge">Mais Vendido</span>
+                        <img src="{{ pacote.data.image }}" alt="{{ pacote.data.title }}">
+                        {% if pacote.data.badge.text %}
+                        <span class="badge badge-{{ pacote.data.badge.color | lower }}">
+                            {{ pacote.data.badge.text }}
+                        </span>
+                        {% endif %}
                     </div>
                     <div class="card-body">
-                        <h3>Fortaleza + 1 dia de Beach Park</h3>
+                        <h3>{{ pacote.data.title }}</h3>
                         <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> 12 a 18 Nov 2026</span>
-                            <span><i class="fa-solid fa-clock"></i> 7 Dias</span>
+                            <span><i class="fa-regular fa-calendar"></i> {{ pacote.data.date_range }}</span>
+                            <span><i class="fa-solid fa-clock"></i> {{ pacote.data.duration }}</span>
                         </div>
-                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Fortaleza, CE</p>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> {{ pacote.data.location }}</p>
                         <div class="price-box">
                             <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 2.490</span>
-                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                            <span class="price-value">R$ {{ pacote.data.price }}</span>
+                            <span class="price-cond">{{ pacote.data.price_cond }}</span>
                         </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                        {% set wa_message = "Olá! Gostaria de mais informações sobre o pacote: " + pacote.data.title %}
+                        <a href="{{ pacote.data.link if pacote.data.link else 'https://wa.me/' + settings.whatsapp + '?text=' + wa_message | urlencode }}" class="btn btn-outline btn-full" target="_blank">Saiba Mais</a>
                     </div>
                 </div>
-
-                <!-- Fake Card 2 -->
-                <div class="package-card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=600&q=80" alt="Maceió">
-                    </div>
-                    <div class="card-body">
-                        <h3>Encantos de Maceió e Maragogi</h3>
-                        <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> 05 a 10 Dez 2026</span>
-                            <span><i class="fa-solid fa-clock"></i> 5 Dias</span>
-                        </div>
-                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Alagoas, AL</p>
-                        <div class="price-box">
-                            <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 1.950</span>
-                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
-                        </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Fake Card 3 -->
-                <div class="package-card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80" alt="Buenos Aires">
-                        <span class="badge badge-international">Internacional</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Buenos Aires Clássica</h3>
-                        <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> 20 a 24 Jan 2027</span>
-                            <span><i class="fa-solid fa-clock"></i> 4 Dias</span>
-                        </div>
-                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Argentina</p>
-                        <div class="price-box">
-                            <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 3.100</span>
-                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
-                        </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
-                    </div>
-                </div>
+                {% else %}
+                <p style="text-align: center; grid-column: 1/-1;">Nenhum pacote aéreo disponível no momento.</p>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -196,68 +161,35 @@
             </div>
             
             <div class="grid cards-grid">
-                <!-- Card 1 -->
+                {% for pacote in collections.pacotes_rodoviarios %}
                 <div class="package-card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1543781525-2fa7883395c5?auto=format&fit=crop&w=600&q=80" alt="Gramado e Canela">
+                        <img src="{{ pacote.data.image }}" alt="{{ pacote.data.title }}">
+                        {% if pacote.data.badge.text %}
+                        <span class="badge badge-{{ pacote.data.badge.color | lower }}">
+                            {{ pacote.data.badge.text }}
+                        </span>
+                        {% endif %}
                     </div>
                     <div class="card-body">
-                        <h3>Gramado e Canela – ChocoPáscoa 2026</h3>
+                        <h3>{{ pacote.data.title }}</h3>
                         <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> 02 a 06 Abr 2026</span>
-                            <span><i class="fa-solid fa-clock"></i> 5 Dias</span>
+                            <span><i class="fa-regular fa-calendar"></i> {{ pacote.data.date_range }}</span>
+                            <span><i class="fa-solid fa-clock"></i> {{ pacote.data.duration }}</span>
                         </div>
-                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Rio Grande do Sul</p>
+                        <p class="destination"><i class="fa-solid fa-location-dot"></i> {{ pacote.data.location }}</p>
                         <div class="price-box">
                             <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 1.250</span>
-                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
+                            <span class="price-value">R$ {{ pacote.data.price }}</span>
+                            <span class="price-cond">{{ pacote.data.price_cond }}</span>
                         </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                        {% set wa_message = "Olá! Gostaria de mais informações sobre o pacote rodoviário: " + pacote.data.title %}
+                        <a href="{{ pacote.data.link if pacote.data.link else 'https://wa.me/' + settings.whatsapp + '?text=' + wa_message | urlencode }}" class="btn btn-outline btn-full" target="_blank">Saiba Mais</a>
                     </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="package-card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1563220494-b772cfff7e12?auto=format&fit=crop&w=600&q=80" alt="Foz do Iguaçu">
-                    </div>
-                    <div class="card-body">
-                        <h3>Maravilhas de Foz do Iguaçu</h3>
-                        <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> 10 a 14 Mai 2026</span>
-                            <span><i class="fa-solid fa-clock"></i> 4 Dias</span>
-                        </div>
-                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Paraná</p>
-                        <div class="price-box">
-                            <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 980</span>
-                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
-                        </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="package-card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80" alt="Beto Carrero">
-                    </div>
-                    <div class="card-body">
-                        <h3>Diversão no Beto Carrero World</h3>
-                        <div class="card-info">
-                            <span><i class="fa-regular fa-calendar"></i> Finais de Semana</span>
-                            <span><i class="fa-solid fa-clock"></i> 2 Dias</span>
-                        </div>
-                        <p class="destination"><i class="fa-solid fa-location-dot"></i> Santa Catarina</p>
-                        <div class="price-box">
-                            <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 650</span>
-                            <span class="price-cond">por pessoa | Em até 10x sem juros</span>
-                        </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
-                    </div>
-                </div>
+                {% else %}
+                <p style="text-align: center; grid-column: 1/-1;">Nenhum pacote rodoviário disponível no momento.</p>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -271,45 +203,34 @@
             </div>
             
             <div class="grid cards-grid">
+                {% for pacote in collections.cruzeiros %}
                 <div class="package-card">
                     <div class="card-img-wrapper">
-                        <img src="/agencia-cruise.png" alt="Mini Cruzeiro">
-                        <span class="badge badge-cruise">Nacional</span>
+                        <img src="{{ pacote.data.image }}" alt="{{ pacote.data.title }}">
+                        {% if pacote.data.badge.text %}
+                        <span class="badge badge-{{ pacote.data.badge.color | lower }}">
+                            {{ pacote.data.badge.text }}
+                        </span>
+                        {% endif %}
                     </div>
                     <div class="card-body">
-                        <h3>Mini Cruzeiro – Costa Diadema</h3>
+                        <h3>{{ pacote.data.title }}</h3>
                         <div class="card-info">
-                            <span><i class="fa-solid fa-anchor"></i> Santos, Búzios, Ilhabela</span>
-                            <span><i class="fa-solid fa-clock"></i> 4 Noites</span>
+                            <span><i class="fa-solid fa-anchor"></i> {{ pacote.data.itinerary }}</span>
+                            <span><i class="fa-solid fa-clock"></i> {{ pacote.data.duration }}</span>
                         </div>
                         <div class="price-box">
                             <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 3.500</span>
-                            <span class="price-cond">por pessoa | Entrada + 12x sem juros</span>
+                            <span class="price-value">R$ {{ pacote.data.price }}</span>
+                            <span class="price-cond">{{ pacote.data.price_cond }}</span>
                         </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
+                        {% set wa_message = "Olá! Gostaria de mais informações sobre o cruzeiro: " + pacote.data.title %}
+                        <a href="{{ pacote.data.link if pacote.data.link else 'https://wa.me/' + settings.whatsapp + '?text=' + wa_message | urlencode }}" class="btn btn-outline btn-full" target="_blank">Saiba Mais</a>
                     </div>
                 </div>
-
-                <div class="package-card">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1601053153579-2476b7bd4bda?auto=format&fit=crop&w=600&q=80" alt="Caribe">
-                        <span class="badge badge-international">Internacional</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Caribe Fascinante - MSC Seascape</h3>
-                        <div class="card-info">
-                            <span><i class="fa-solid fa-anchor"></i> Miami, Bahamas, Jamaica</span>
-                            <span><i class="fa-solid fa-clock"></i> 7 Noites</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-label">A partir de</span>
-                            <span class="price-value">R$ 8.900</span>
-                            <span class="price-cond">por pessoa | Entrada + 12x sem juros</span>
-                        </div>
-                        <a href="detalhes-pacote.html" class="btn btn-outline btn-full">Saiba Mais</a>
-                    </div>
-                </div>
+                {% else %}
+                <p style="text-align: center; grid-column: 1/-1;">Nenhum cruzeiro disponível no momento.</p>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -404,7 +325,7 @@
             <div class="wa-content">
                 <h2>Receba Ofertas Exclusivas no seu WhatsApp!</h2>
                 <p>Junte-se ao nosso grupo VIP e seja o primeiro a saber das melhores promoções, passagens imperdíveis e pacotes de última hora.</p>
-                <a href="#" class="btn btn-wa-large"><i class="fa-brands fa-whatsapp"></i> Entrar no Grupo VIP</a>
+                <a href="https://wa.me/{{ settings.whatsapp }}" class="btn btn-wa-large" target="_blank"><i class="fa-brands fa-whatsapp"></i> Entrar no Grupo VIP</a>
             </div>
         </div>
     </section>
@@ -421,7 +342,7 @@
                     <div class="social-links">
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://wa.me/{{ settings.whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -440,7 +361,7 @@
                     <ul>
                         <li><i class="fa-solid fa-location-dot"></i> Av. das Viagens, 1234 - Centro</li>
                         <li><i class="fa-solid fa-phone"></i> (11) 9999-9999</li>
-                        <li><i class="fa-brands fa-whatsapp"></i> (11) 98888-8888</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> {{ settings.whatsapp }}</li>
                         <li><i class="fa-solid fa-envelope"></i> reservas@viajamundo.com.br</li>
                     </ul>
                 </div>
@@ -453,7 +374,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="#" class="floating-wa" aria-label="WhatsApp">
+    <a href="https://wa.me/{{ settings.whatsapp }}" class="floating-wa" aria-label="WhatsApp" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 

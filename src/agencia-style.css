@@ -446,8 +446,13 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
-.badge-international { background: var(--primary-color); }
+.badge-blue { background: var(--primary-color); }
+.badge-orange { background: var(--secondary-color); }
+.badge-green { background: #25D366; }
+.badge-red { background: #E53E3E; }
 .badge-cruise { background: #00B4D8; }
+
+.badge-international { background: var(--primary-color); }
 
 .card-body {
     padding: 25px;

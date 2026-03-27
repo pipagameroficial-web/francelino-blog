@@ -18,6 +18,62 @@ collections:
       - {label: "Data de Publicação", name: "date", widget: "datetime"}
       - {label: "Texto do Artigo", name: "body", widget: "markdown"}
 
+  - name: "pacotes_aereos"
+    label: "✈️ Pacotes Aéreos"
+    folder: "src/pacotes/aereos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título do Pacote", name: "title", widget: "string"}
+      - {label: "Imagem de Destaque", name: "image", widget: "image"}
+      - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [
+          {label: "Texto (ex: Mais Vendido)", name: "text", widget: "string", required: false},
+          {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho"], default: "Laranja"}
+      ]}
+      - {label: "Data da Viagem", name: "date_range", widget: "string", hint: "Ex: 12 a 18 Nov 2026"}
+      - {label: "Duração", name: "duration", widget: "string", hint: "Ex: 7 Dias"}
+      - {label: "Destino", name: "location", widget: "string", hint: "Ex: Fortaleza, CE"}
+      - {label: "Preço (apenas número)", name: "price", widget: "string", hint: "Ex: 2.490"}
+      - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Em até 10x sem juros"}
+      - {label: "Link Personalizado (Opcional)", name: "link", widget: "string", required: false, hint: "Deixe em branco para usar o WhatsApp padrão"}
+
+  - name: "pacotes_rodoviarios"
+    label: "🚌 Pacotes Rodoviários"
+    folder: "src/pacotes/rodoviarios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título do Pacote", name: "title", widget: "string"}
+      - {label: "Imagem de Destaque", name: "image", widget: "image"}
+      - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [
+          {label: "Texto", name: "text", widget: "string", required: false},
+          {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho"], default: "Azul"}
+      ]}
+      - {label: "Data da Viagem", name: "date_range", widget: "string"}
+      - {label: "Duração", name: "duration", widget: "string"}
+      - {label: "Destino", name: "location", widget: "string"}
+      - {label: "Preço (apenas número)", name: "price", widget: "string"}
+      - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Em até 10x sem juros"}
+      - {label: "Link Personalizado", name: "link", widget: "string", required: false}
+
+  - name: "cruzeiros"
+    label: "🚢 Cruzeiros"
+    folder: "src/pacotes/cruzeiros"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título do Cruzeiro", name: "title", widget: "string"}
+      - {label: "Imagem de Destaque", name: "image", widget: "image"}
+      - {label: "Selo Promocional (Badge)", name: "badge", widget: "object", fields: [
+          {label: "Texto", name: "text", widget: "string", required: false},
+          {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho", "Navio"], default: "Navio"}
+      ]}
+      - {label: "Itinerário", name: "itinerary", widget: "string", hint: "Ex: Santos, Búzios, Ilhabela"}
+      - {label: "Duração", name: "duration", widget: "string", hint: "Ex: 4 Noites"}
+      - {label: "Preço (apenas número)", name: "price", widget: "string"}
+      - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Entrada + 12x sem juros"}
+      - {label: "Link Personalizado", name: "link", widget: "string", required: false}
+
   - name: "settings"
     label: "⚙️ Configurações do Site"
     files:
