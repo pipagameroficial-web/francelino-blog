@@ -30,12 +30,14 @@ collections:
           {label: "Texto (ex: Mais Vendido)", name: "text", widget: "string", required: false},
           {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho"], default: "Laranja"}
       ]}
-      - {label: "Data da Viagem", name: "date_range", widget: "string", hint: "Ex: 12 a 18 Nov 2026"}
+      - {label: "Data da Viagem (Texto)", name: "date_range", widget: "string", hint: "Ex: 12 a 18 Nov 2026"}
+      - {label: "Data de Início (Para o Calendário)", name: "start_date", widget: "datetime", required: false}
       - {label: "Duração", name: "duration", widget: "string", hint: "Ex: 7 Dias"}
       - {label: "Destino", name: "location", widget: "string", hint: "Ex: Fortaleza, CE"}
       - {label: "Preço (apenas número)", name: "price", widget: "string", hint: "Ex: 2.490"}
       - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Em até 10x sem juros"}
       - {label: "Link Personalizado (Opcional)", name: "link", widget: "string", required: false, hint: "Deixe em branco para usar o WhatsApp padrão"}
+      - {label: "Descrição/Itinerário Detalhado", name: "body", widget: "markdown", required: false}
 
   - name: "pacotes_rodoviarios"
     label: "🚌 Pacotes Rodoviários"
@@ -49,12 +51,14 @@ collections:
           {label: "Texto", name: "text", widget: "string", required: false},
           {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho"], default: "Azul"}
       ]}
-      - {label: "Data da Viagem", name: "date_range", widget: "string"}
+      - {label: "Data da Viagem (Texto)", name: "date_range", widget: "string"}
+      - {label: "Data de Início (Para o Calendário)", name: "start_date", widget: "datetime", required: false}
       - {label: "Duração", name: "duration", widget: "string"}
       - {label: "Destino", name: "location", widget: "string"}
       - {label: "Preço (apenas número)", name: "price", widget: "string"}
       - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Em até 10x sem juros"}
       - {label: "Link Personalizado", name: "link", widget: "string", required: false}
+      - {label: "Descrição/Itinerário Detalhado", name: "body", widget: "markdown", required: false}
 
   - name: "cruzeiros"
     label: "🚢 Cruzeiros"
@@ -68,11 +72,14 @@ collections:
           {label: "Texto", name: "text", widget: "string", required: false},
           {label: "Cor do Selo", name: "color", widget: "select", options: ["Azul", "Laranja", "Verde", "Vermelho", "Navio"], default: "Navio"}
       ]}
+      - {label: "Data da Viagem (Texto)", name: "date_range", widget: "string", required: false}
+      - {label: "Data de Início (Para o Calendário)", name: "start_date", widget: "datetime", required: false}
       - {label: "Itinerário", name: "itinerary", widget: "string", hint: "Ex: Santos, Búzios, Ilhabela"}
       - {label: "Duração", name: "duration", widget: "string", hint: "Ex: 4 Noites"}
       - {label: "Preço (apenas número)", name: "price", widget: "string"}
       - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Entrada + 12x sem juros"}
       - {label: "Link Personalizado", name: "link", widget: "string", required: false}
+      - {label: "Descrição Detalhada", name: "body", widget: "markdown", required: false}
 
   - name: "settings"
     label: "⚙️ Configurações do Site"
