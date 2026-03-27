@@ -12,6 +12,19 @@ module.exports = function(eleventyConfig) {
     "src/grupo-promo-paraguay": "grupo-promo-paraguay"
   });
 
+  // Coleções Automáticas por Pasta
+  eleventyConfig.addCollection("pacotes_aereos", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/pacotes/aereos/*.md");
+  });
+
+  eleventyConfig.addCollection("pacotes_rodoviarios", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/pacotes/rodoviarios/*.md");
+  });
+
+  eleventyConfig.addCollection("cruzeiros", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/pacotes/cruzeiros/*.md");
+  });
+
   return {
     dir: {
       input: "src",
