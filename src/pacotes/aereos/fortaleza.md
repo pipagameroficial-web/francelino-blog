@@ -1,4 +1,5 @@
 ---
+layout: pacote.njk
 title: "Fortaleza + 1 dia de Beach Park"
 image: "/agencia-flight.png"
 badge:
@@ -10,3 +11,4 @@ location: "Fortaleza, CE"
 price: "2.490"
 price_cond: "por pessoa | Em até 10x sem juros"
 ---
+Sol, praia e muita diversão com um dia inteiro no melhor parque aquático do Brasil.
