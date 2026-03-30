@@ -90,7 +90,7 @@ price_cond: por pessoa | Em até 10x sem juros
 
 🚌 Transporte rodoviário executivo;
 
-* **Capacidade:** tipicamente 60 **passageiros;**
+* **Capacidade:** tipicamente 57 **passageiros;**
 * Em muitas versões, **poltronas reclináveis**, algumas com funções semi-*leito.*
 * **Tomadas USB** (tipo A e C) em muitas configurações.
 * **Ar-condicionado multizona**, permitindo temperaturas ajustadas por área.
