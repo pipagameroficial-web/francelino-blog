@@ -24,7 +24,7 @@ price_cond: por pessoa | Em até 10x sem juros
 link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou **entrada
   de R$200 + parcelas no PIX** até **20 dias antes do embarque;**
 ---
-# Detalhes do Roteiro
+
 
 * 📆 🔹 **04/09/2026 | (SEXTA-FEIRA) — SAÍDA | BARRA FUNDA | SÃO PAULO**
 * 🚌 ONIBUS
@@ -33,8 +33,6 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * ⏳ Tempo médio: 16 a 18 horas;
 * 📏 Distância: ~1.050 km
 * 🥐 Parada Para Jantar;
-
-
 
 - - -
 
@@ -87,15 +85,12 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * **Ar-condicionado multizona**, permitindo temperaturas ajustadas por área.
 * Painéis multimídia, Wi-Fi opcional e sistemas de entretenimento podem ser incluídos conforme opção do operador.
 
-
 ### **Serviços Inclusos**
 
 * ✅ Transporte em ônibus semi-leito;
 * ✅ Guia acompanhante Francelino Turismo;
 * ✅ Seguro viagem;
 * ✅ Guia local em Foz do Iguaçu.
-
-
 
 ### **⚠️ O que não está incluso;**
 
