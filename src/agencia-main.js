@@ -29,17 +29,27 @@ navLinks.forEach(link => {
     });
 });
 
-// Header scroll effect
+// Header scroll effect with performance optimization
 const header = document.getElementById('header');
+let lastScrollY = 0;
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-        header.style.padding = '5px 0';
-    } else {
-        header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.05)';
-        header.style.padding = '0';
+    lastScrollY = window.scrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            if (lastScrollY > 50) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                header.style.padding = '5px 0';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.05)';
+                header.style.padding = '0';
+            }
+            ticking = false;
+        });
+        ticking = true;
     }
-});
+}, { passive: true });
 
 // Search Mock
 const searchForm = document.querySelector('.search-form');
