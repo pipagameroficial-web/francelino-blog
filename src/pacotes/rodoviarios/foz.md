@@ -50,9 +50,7 @@ price_cond: por pessoa | Em até 10x sem juros
 * 💃🏻 Madero Tango Show (Opcional)
 * 🎰 Cassino (Opcional)
 
->
 > ⚠️ **ATENÇÃO:** Para entrar na Argentina é Obrigatório RG ou CNH com no mínimo 10 anos de expedição ou passaporte com validade.
->
 >
 > ⚠️ **ATENÇÃO:** Lembrando que temos acesso ao exclusivo corredor turístico - que muitas vezes economiza horas de fila!
 
