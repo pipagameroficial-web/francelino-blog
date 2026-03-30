@@ -1,26 +1,26 @@
 ---
 layout: pacote.njk
-title: "Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷"
-category: "Internacional"
-image: "/agencia-bus.png"
+title: Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷
+category: Internacional
+image: /agencia-bus.png
 gallery:
-  - image: "/agencia-bus.png"
-  - image: "/gal_compras.jpg"
-  - image: "/agencia-flight.png"
-  - image: "/foto_grupo.jpg"
-  - image: "/hero_paraguay.png"
-  - image: "/agencia-cruise.png"
+  - image: /agencia-bus.png
+  - image: /gal_compras.jpg
+  - uploads/whatsapp-image-2026-03-30-at-12.44.36-1-.jpeg
+  - image: /foto_grupo.jpg
+  - image: /hero_paraguay.png
+  - uploads/whatsapp-image-2026-03-30-at-12.44.35-1-.jpeg
 badge:
-  text: "Saída Setembro"
-  color: "Azul"
+  text: Saída Setembro
+  color: Azul
 dates:
-  departure: "04/09/2026"
-  return: "06/09/2026"
-  display: "04 a 06 Set"
-duration: "2 Dias"
-location: "Foz do Iguaçu"
+  departure: 04/09/2026
+  return: 06/09/2026
+  display: 04 a 06 Set
+duration: 2 Dias
+location: Foz do Iguaçu
 price: "650"
-price_cond: "por pessoa | Em até 10x sem juros"
+price_cond: por pessoa | Em até 10x sem juros
 ---
 ### Detalhes do Roteiro
 
