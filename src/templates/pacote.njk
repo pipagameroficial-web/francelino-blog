@@ -298,6 +298,36 @@
             background: #00B52F;
         }
 
+        /* Pagamento Section */
+        .payment-section {
+            margin: 25px 0;
+            padding-top: 20px;
+            border-top: 1px solid #EEE;
+        }
+
+        .payment-section h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .payment-section h4 i {
+            color: var(--accent-orange);
+        }
+
+        .payment-content {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .payment-content p { margin: 0 0 10px; }
+        .payment-content strong { color: var(--primary-navy); }
+
         .itinerary-card {
             background: white;
             padding: 40px;
@@ -401,6 +431,15 @@
                     <span class="value">R$ {{ price }}</span>
                     <span style="font-size: 0.85rem; color: #999;">{{ price_cond }}</span>
                 </div>
+
+                {% if payment_conditions %}
+                <div class="payment-section">
+                    <h4><i class="fa-solid fa-credit-card"></i> Formas de Pagamento</h4>
+                    <div class="payment-content">
+                        {{ payment_conditions | safe }}
+                    </div>
+                </div>
+                {% endif %}
 
                 {% set wa_message = "Olá! Gostaria de comprar o pacote: " + title %}
                 <a href="https://wa.me/{{ settings.whatsapp }}?text={{ wa_message | urlencode }}" class="btn-comprar">

@@ -37,6 +37,7 @@ collections:
       - {label: "Destino", name: "location", widget: "string", hint: "Ex: Fortaleza, CE"}
       - {label: "Preço (apenas número)", name: "price", widget: "string", hint: "Ex: 2.490"}
       - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Em até 10x sem juros"}
+      - {label: "💳 Condições de Pagamento", name: "payment_conditions", widget: "markdown", required: false, hint: "Ex: À vista 5% desconto, ou 12x no cartão"}
       - {label: "Link Personalizado (Opcional)", name: "link", widget: "string", required: false, hint: "Deixe em branco para usar o WhatsApp padrão"}
       - label: "📸 Galeria de Imagens (Adicione quantas quiser)"
         name: "gallery"
@@ -75,6 +76,7 @@ collections:
       - {label: "Localização (ex: Rio de Janeiro, RJ)", name: "location", widget: "string"}
       - {label: "💰 Preço (A partir de)", name: "price", widget: "string"}
       - {label: "Condição (ex: em até 10x sem juros)", name: "price_cond", widget: "string"}
+      - {label: "💳 Condições de Pagamento", name: "payment_conditions", widget: "markdown", required: false, hint: "Ex: À vista 5% desconto, ou 12x no cartão"}
       - {label: "Link Personalizado", name: "link", widget: "string", required: false}
       - {label: "📝 Roteiro Detalhado (Dia a Dia)", name: "body", widget: "markdown"}
 
@@ -97,6 +99,7 @@ collections:
       - {label: "Duração", name: "duration", widget: "string", hint: "Ex: 4 Noites"}
       - {label: "Preço (apenas número)", name: "price", widget: "string"}
       - {label: "Condição de Preço", name: "price_cond", widget: "string", default: "por pessoa | Entrada + 12x sem juros"}
+      - {label: "💳 Condições de Pagamento", name: "payment_conditions", widget: "markdown", required: false, hint: "Ex: À vista 5% desconto, ou 12x no cartão"}
       - {label: "Link Personalizado", name: "link", widget: "string", required: false}
       - label: "📸 Galeria de Imagens (Adicione quantas quiser)"
         name: "gallery"
