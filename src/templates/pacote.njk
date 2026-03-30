@@ -328,6 +328,109 @@
         .payment-content p { margin: 0 0 10px; }
         .payment-content strong { color: var(--primary-navy); }
 
+        /* Refinamento das listas de pagamento */
+        .payment-content ul {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 15px 0 0 !important;
+        }
+
+        .payment-content ul li {
+            position: relative;
+            padding-left: 28px !important;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .payment-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--success-green);
+            font-size: 0.85rem;
+        }
+
+        /* Nova Grid de Informações Extras */
+        .extra-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0 40px;
+        }
+
+        .info-card-premium {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #F0F0F0;
+        }
+
+        .info-card-premium h4 {
+            font-size: 1.1rem;
+            margin: 0 0 15px;
+            color: var(--primary-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card-premium h4 i { color: var(--accent-orange); }
+
+        /* Estilo Organizado de Pagamento */
+        .payment-list-organized {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .payment-list-organized li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #EEE;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .payment-list-organized li:last-child { border: none; }
+
+        /* Instagram Card */
+        .instagram-card {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: white;
+            border: none;
+        }
+
+        .instagram-card h4 { color: white; }
+        .instagram-card h4 i { color: white; }
+
+        .btn-instagram {
+            margin-top: auto;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-instagram:hover {
+            background: white;
+            color: #cc2366;
+        }
+
         .itinerary-card {
             background: white;
             padding: 40px;
@@ -403,6 +506,34 @@
                 </div>
             </div>
 
+            <div class="extra-info-grid">
+                <!-- Card de Pagamento Organizado -->
+                <div class="info-card-premium">
+                    <h4><i class="fa-solid fa-credit-card"></i> Formas de Pagamento</h4>
+                    <div class="payment-content">
+                        {% if payment_conditions %}
+                            {{ payment_conditions | safe }}
+                        {% else %}
+                            <p>Consulte nossas condições de parcelamento no WhatsApp.</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Card de Instagram -->
+                <div class="info-card-premium instagram-card">
+                    <h4><i class="fa-brands fa-instagram"></i> Siga-nos no Instagram</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">Fique por dentro de todos os nossos destinos e promoções exclusivas!</p>
+                    <div style="display: flex; gap: 8px; margin: 15px 0;">
+                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden;"><img src="{{ image }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; opacity: 0.7;"><img src="{{ gallery_list[0].image if gallery_list[0].image else gallery_list[0] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; opacity: 0.4;"><img src="{{ gallery_list[1].image if gallery_list[1].image else gallery_list[1] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    </div>
+                    <a href="https://instagram.com/francelinoturismo" class="btn-instagram" target="_blank">
+                        VER NO INSTAGRAM
+                    </a>
+                </div>
+            </div>
+
             <div class="itinerary-card">
                 <h2>Detalhes do Pacote</h2>
                 <div class="itinerary-content">
@@ -431,15 +562,6 @@
                     <span class="value">R$ {{ price }}</span>
                     <span style="font-size: 0.85rem; color: #999;">{{ price_cond }}</span>
                 </div>
-
-                {% if payment_conditions %}
-                <div class="payment-section">
-                    <h4><i class="fa-solid fa-credit-card"></i> Formas de Pagamento</h4>
-                    <div class="payment-content">
-                        {{ payment_conditions | safe }}
-                    </div>
-                </div>
-                {% endif %}
 
                 {% set wa_message = "Olá! Gostaria de comprar o pacote: " + title %}
                 <a href="https://wa.me/{{ settings.whatsapp }}?text={{ wa_message | urlencode }}" class="btn-comprar">
