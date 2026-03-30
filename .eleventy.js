@@ -37,6 +37,7 @@ module.exports = function(eleventyConfig) {
     "src/*.js": ".",
     "src/*.jpg": ".",
     "src/*.png": ".",
+    "src/assets": "assets",
     "src/promocao": "promocao",
     "src/grupo-promo-paraguay": "grupo-promo-paraguay"
   });
