@@ -19,7 +19,7 @@ dates:
   display: 04 a 06 Set
 duration: 2 Dias
 location: Foz do Iguaçu
-price: "650"
+price: "1500"
 price_cond: por pessoa | Em até 10x sem juros
 ---
 ### Detalhes do Roteiro
