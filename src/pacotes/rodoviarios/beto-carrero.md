@@ -5,7 +5,7 @@ category: Internacional
 image: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80
 gallery:
   img1: uploads/whatsapp-image-2026-03-30-at-12.44.35.jpeg
-  img2: https://images.unsplash.com/photo-1563220494-b772cfff7e12?auto=format&fit=crop&w=600&q=80
+  img2: uploads/whatsapp-image-2026-03-30-at-12.44.35-1-.jpeg
   img3: https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80
   img4: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80
   img5: https://images.unsplash.com/photo-1563220494-b772cfff7e12?auto=format&fit=crop&w=600&q=80
