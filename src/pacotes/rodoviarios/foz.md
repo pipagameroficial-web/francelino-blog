@@ -74,3 +74,12 @@ price_cond: por pessoa | Em até 10x sem juros
 * **🏦 New Zone Importados;**
 * 🏨 Fly Time Eletrônicos;
 * Retorno as 14:30;
+
+
+
+📆 🔹 **07/09/2026 (SEGUNDA-FEIRA) -** 🇧🇷 Cataratas Do Iguaçu 🦜
+
+* ⏰ Saída: 08h
+* ⏱️ Retorno: 15h
+* Incluso Ingressos Cataratas;
+* Guiado em todo trajeto;
