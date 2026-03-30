@@ -507,20 +507,47 @@
             </div>
 
             <div class="extra-info-grid" style="grid-template-columns: 1fr;">
-                <!-- Card de Instagram (Agora em destaque total no espaço branco) -->
-                <div class="info-card-premium instagram-card" style="flex-direction: row; align-items: center; justify-content: space-between; gap: 30px;">
-                    <div style="flex: 1;">
-                        <h4><i class="fa-brands fa-instagram"></i> Siga-nos no Instagram</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.9; margin: 0;">Fique por dentro de todos os nossos destinos e promoções exclusivas!</p>
+                <!-- Card de Instagram (Agora com conteúdo REAL do perfil) -->
+                <div class="info-card-premium instagram-card" style="flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 45px; height: 45px; border-radius: 50%; border: 2px solid white; overflow: hidden;">
+                                <img src="{{ image }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; font-size: 1rem;"><i class="fa-brands fa-instagram"></i> @francelino_turismo_oficial</h4>
+                                <span style="font-size: 0.7rem; opacity: 0.9;">Atualizado recentemente</span>
+                            </div>
+                        </div>
+                        <a href="https://instagram.com/francelino_turismo_oficial/" target="_blank" class="btn-instagram" style="margin: 0; padding: 8px 15px; font-size: 0.8rem;">
+                            SEGUIR
+                        </a>
                     </div>
-                    <div style="display: flex; gap: 12px;">
-                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);"><img src="{{ image }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2); opacity: 0.7;"><img src="{{ gallery_list[0].image if gallery_list[0].image else gallery_list[0] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2); opacity: 0.4;"><img src="{{ gallery_list[1].image if gallery_list[1].image else gallery_list[1] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+
+                    <div style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; font-size: 0.85rem; line-height: 1.4;">
+                        <strong>Último post:</strong> "Vai comprar no Paraguai pela primeira vez? 🇵🇾 Então salva este post, porque essas dicas evitam dor de cabeça!..."
                     </div>
-                    <a href="https://instagram.com/francelinoturismo" class="btn-instagram" target="_blank" style="margin-top: 0; min-width: 180px;">
-                        VER NO INSTAGRAM
-                    </a>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%;">
+                        <a href="https://www.instagram.com/reel/DSmptEtDuOf/" target="_blank" style="aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="https://www.instagram.com/reel/DSmptEtDuOf/media/?size=l" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DDdR9RAvJ_B/" target="_blank" style="aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="https://www.instagram.com/reel/DDdR9RAvJ_B/media/?size=l" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DWFKZZ2gBJS/" target="_blank" style="aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="https://www.instagram.com/reel/DWFKZZ2gBJS/media/?size=l" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DDs-G19gV95/" target="_blank" style="aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="https://www.instagram.com/reel/DDs-G19gV95/media/?size=l" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DDp8_J9gg5v/" target="_blank" style="aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="https://www.instagram.com/reel/DDp8_J9gg5v/media/?size=l" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                        <a href="https://www.instagram.com/reel/DDks1RcAatx/" target="_blank" style="aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2);">
+                            <img src="https://www.instagram.com/reel/DDks1RcAatx/media/?size=l" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                    </div>
                 </div>
             </div>
 
