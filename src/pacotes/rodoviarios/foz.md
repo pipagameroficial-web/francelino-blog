@@ -32,15 +32,17 @@ price_cond: por pessoa | Em até 10x sem juros
 * 📏 Distância: ~1.050 km
 * 🥐 Parada Para Jantar;
 
----
+- - -
 
 ### 📆 🔹 05/09/2026 (SÁBADO) | 🇦🇷 - By Night Argentina
+
 * 🕕 **Previsão de chegada:** 11:00–12:00;
 * 🏨 **Check-in Hotel;**
 * ⏰ **Saída:** 16h
 * ⏱️ **Retorno:** 23h
 
 **Pontos de visitação:**
+
 * 🛍️ Duty Free
 * 🍷 Vinoteca
 * 📍 Feirinha (Degustação de doces, alfajores, azeitonas, salaminhos e queijos)
@@ -48,10 +50,10 @@ price_cond: por pessoa | Em até 10x sem juros
 * 💃🏻 Madero Tango Show (Opcional)
 * 🎰 Cassino (Opcional)
 
-> [!IMPORTANT]
+>
 > ⚠️ **ATENÇÃO:** Para entrar na Argentina é Obrigatório RG ou CNH com no mínimo 10 anos de expedição ou passaporte com validade.
-
-> [!TIP]
+>
+>
 > ⚠️ **ATENÇÃO:** Lembrando que temos acesso ao exclusivo corredor turístico - que muitas vezes economiza horas de fila!
 
 ### Serviços Inclusos
