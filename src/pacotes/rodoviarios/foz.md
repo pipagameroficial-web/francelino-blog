@@ -16,7 +16,7 @@ badge:
 dates:
   departure: 04/09/2026
   return: 06/09/2026
-  display: 04 a 06 Set
+  display: 04 a 07 Set
 duration: 2 Dias
 location: Foz do Iguaçu
 price: "1500"
