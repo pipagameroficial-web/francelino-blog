@@ -4,13 +4,28 @@ module.exports = function(eleventyConfig) {
     return Array.isArray(value);
   });
 
+   // Filtro para garantir caminho absoluto em caminhos locais
+  eleventyConfig.addFilter("absolute_path", function(url) {
+    if (typeof url !== 'string' || url.startsWith('http') || url.startsWith('/')) return url;
+    return '/' + url;
+  });
+
   // Filtro para otimizar imagens do Unsplash
   eleventyConfig.addFilter("optimize_unsplash", function(url, width = 1000) {
-    if (typeof url !== 'string' || !url.includes('unsplash.com')) return url;
+    if (typeof url !== 'string') return url;
     
-    // Remove parâmetros existentes e reconstrói com otimização
-    const baseUrl = url.split('?')[0];
-    return `${baseUrl}?auto=format&fit=crop&q=75&w=${width}`;
+    // Se for Unsplash, otimiza
+    if (url.includes('unsplash.com')) {
+      const baseUrl = url.split('?')[0];
+      return `${baseUrl}?auto=format&fit=crop&q=75&w=${width}`;
+    }
+    
+    // Se não for Unsplash, garante que o caminho local seja absoluto
+    if (!url.startsWith('http') && !url.startsWith('/')) {
+      return '/' + url;
+    }
+    
+    return url;
   });
 
   // Configuração para garantir que os arquivos apareçam na raiz do site final
