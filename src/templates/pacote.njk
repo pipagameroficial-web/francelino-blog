@@ -506,29 +506,19 @@
                 </div>
             </div>
 
-            <div class="extra-info-grid">
-                <!-- Card de Pagamento Organizado -->
-                <div class="info-card-premium">
-                    <h4><i class="fa-solid fa-credit-card"></i> Formas de Pagamento</h4>
-                    <div class="payment-content">
-                        {% if payment_conditions %}
-                            {{ payment_conditions | safe }}
-                        {% else %}
-                            <p>Consulte nossas condições de parcelamento no WhatsApp.</p>
-                        {% endif %}
+            <div class="extra-info-grid" style="grid-template-columns: 1fr;">
+                <!-- Card de Instagram (Agora em destaque total no espaço branco) -->
+                <div class="info-card-premium instagram-card" style="flex-direction: row; align-items: center; justify-content: space-between; gap: 30px;">
+                    <div style="flex: 1;">
+                        <h4><i class="fa-brands fa-instagram"></i> Siga-nos no Instagram</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.9; margin: 0;">Fique por dentro de todos os nossos destinos e promoções exclusivas!</p>
                     </div>
-                </div>
-
-                <!-- Card de Instagram -->
-                <div class="info-card-premium instagram-card">
-                    <h4><i class="fa-brands fa-instagram"></i> Siga-nos no Instagram</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.9;">Fique por dentro de todos os nossos destinos e promoções exclusivas!</p>
-                    <div style="display: flex; gap: 8px; margin: 15px 0;">
-                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden;"><img src="{{ image }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; opacity: 0.7;"><img src="{{ gallery_list[0].image if gallery_list[0].image else gallery_list[0] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; opacity: 0.4;"><img src="{{ gallery_list[1].image if gallery_list[1].image else gallery_list[1] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                    <div style="display: flex; gap: 12px;">
+                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2);"><img src="{{ image }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2); opacity: 0.7;"><img src="{{ gallery_list[0].image if gallery_list[0].image else gallery_list[0] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2); opacity: 0.4;"><img src="{{ gallery_list[1].image if gallery_list[1].image else gallery_list[1] }}" style="width: 100%; height: 100%; object-fit: cover;"></div>
                     </div>
-                    <a href="https://instagram.com/francelinoturismo" class="btn-instagram" target="_blank">
+                    <a href="https://instagram.com/francelinoturismo" class="btn-instagram" target="_blank" style="margin-top: 0; min-width: 180px;">
                         VER NO INSTAGRAM
                     </a>
                 </div>
@@ -573,6 +563,17 @@
                         <i class="fa-brands fa-whatsapp" style="color: var(--success-green); font-size: 1.2rem;"></i> Precisa de ajuda? Clique aqui
                     </a>
                 </div>
+
+                {% if payment_conditions %}
+                <div class="payment-section" style="margin-top: 25px; border-top: 1px solid #EEE; padding-top: 20px;">
+                    <h4 style="font-size: 0.85rem; text-transform: uppercase; color: #999; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-credit-card" style="color: var(--accent-orange);"></i> Formas de Pagamento
+                    </h4>
+                    <div class="payment-content">
+                        {{ payment_conditions | safe }}
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </aside>
     </main>
