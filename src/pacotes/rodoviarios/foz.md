@@ -83,3 +83,15 @@ price_cond: por pessoa | Em até 10x sem juros
 * ⏱️ Retorno: 15h
 * Incluso Ingressos Cataratas;
 * Guiado em todo trajeto;
+
+
+
+📦 **O QUE ESTÁ INCLUSO:**
+
+🚌 Transporte rodoviário executivo;
+
+* **Capacidade:** tipicamente 60 **passageiros;**
+* Em muitas versões, **poltronas reclináveis**, algumas com funções semi-*leito.*
+* **Tomadas USB** (tipo A e C) em muitas configurações.
+* **Ar-condicionado multizona**, permitindo temperaturas ajustadas por área.
+* Painéis multimídia, Wi-Fi opcional e sistemas de entretenimento podem ser incluídos conforme opção do operador.
