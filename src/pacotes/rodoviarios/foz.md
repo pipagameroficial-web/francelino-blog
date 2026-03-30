@@ -63,6 +63,14 @@ price_cond: por pessoa | Em até 10x sem juros
 
 
 
+📆 🔹 **06/09/2026 (DOMINGO) — PARAGUAI 🇵🇾**
 
-
-udbchibdwesiybviuerbviuerbv
+* ☕ 07:00–08:00 – Café da manhã;
+* 🌅 08:00 – Saída compras no paraguay;
+* 🇨🇳 Shopping China;
+* 🇵🇾 Shopping del este paraguay
+* 🇨🇵 Shopping París;
+* 🏢 Cell Shopping;
+* **🏦 New Zone Importados;**
+* 🏨 Fly Time Eletrônicos;
+* Retorno as 14:30;
