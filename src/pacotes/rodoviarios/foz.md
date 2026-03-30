@@ -4,11 +4,11 @@ title: Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷
 category: Internacional
 image: uploads/whatsapp-image-2026-03-30-at-12.44.35.jpeg
 gallery:
-  - uploads/whatsapp-image-2026-03-30-at-12.44.36.jpeg
-  - image: /gal_compras.jpg
+  - uploads/whatsapp-image-2026-03-30-at-17.34.54-1-.jpeg
+  - uploads/whatsapp-image-2026-03-30-at-17.34.54.jpeg
   - uploads/whatsapp-image-2026-03-30-at-12.44.36-1-.jpeg
   - image: /foto_grupo.jpg
-  - image: /hero_paraguay.png
+  - uploads/whatsapp-image-2026-03-30-at-17.34.56-1-.jpeg
   - uploads/whatsapp-image-2026-03-30-at-12.44.35-1-.jpeg
 badge:
   text: Saída Setembro
