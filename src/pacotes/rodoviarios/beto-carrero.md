@@ -2,7 +2,7 @@
 layout: pacote.njk
 title: Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷
 category: Internacional
-image: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80
+image: uploads/whatsapp-image-2026-03-30-at-12.44.35.jpeg
 gallery:
   img1: uploads/whatsapp-image-2026-03-30-at-12.44.35.jpeg
   img2: uploads/whatsapp-image-2026-03-30-at-12.44.35-1-.jpeg
