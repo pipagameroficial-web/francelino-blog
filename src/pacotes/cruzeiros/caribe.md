@@ -1,7 +1,7 @@
 ---
 layout: pacote.njk
 title: "Caribe Fascinante - MSC Seascape"
-image: "https://images.unsplash.com/photo-1601053153579-2476b7bd4bda?auto=format&fit=crop&w=600&q=80"
+image: "https://images.unsplash.com/photo-1601053153579-2476b7bd4bda"
 badge:
   text: "Internacional"
   color: "Azul"

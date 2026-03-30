@@ -1,39 +1,24 @@
 ---
 layout: pacote.njk
-title: "Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷"
-category: "Internacional"
-image: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80
+title: "Diversão no Beto Carrero World"
+image: "https://images.unsplash.com/photo-1587823336302-601e3b6dcc36"
 gallery:
-  img1: https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80
-  img2: https://images.unsplash.com/photo-1563220494-b772cfff7e12?auto=format&fit=crop&w=600&q=80
-  img3: https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80
-  img4: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36?auto=format&fit=crop&w=600&q=80
-  img5: https://images.unsplash.com/photo-1563220494-b772cfff7e12?auto=format&fit=crop&w=600&q=80
-  img6: https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80
+  - image: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36
+  - image: https://images.unsplash.com/photo-1509191434112-9c10f808a098
+  - image: https://images.unsplash.com/photo-1501785888041-af3ef285b470
 badge:
-  text: "Saída Setembro"
+  text: ""
   color: "Azul"
-dates:
-  departure: "04/09/2026"
-  return: "06/09/2026"
-  display: "04 a 06 Set"
+date_range: "Finais de Semana"
 duration: "2 Dias"
-location: "Foz do Iguaçu"
+location: "Santa Catarina"
 price: "650"
 price_cond: "por pessoa | Em até 10x sem juros"
 ---
-### Detalhes do Roteiro
+### Diversão Garantida no Maior Parque Temático da América Latina!
 
-- 📆 🔹 **04/09/2026 | (SEXTA-FEIRA) — SAÍDA | BARRA FUNDA | SÃO PAULO**
-- 🚌 ONIBUS
-- 🕟 15:00 – Concentração, check-in, documentos, bagagens, orientações;
-- 🕕 17:00 – Saída oficial;
-- ⏳ Tempo médio: 16 a 18 horas;
-- 📏 Distância: ~1.050 km
-- 🥐 Parada Para Jantar;
+Viva momentos inesquecíveis no Beto Carrero World. Montanhas-russas, shows temáticos e muita diversão para toda a família.
 
-### Serviços Inclusos
-- ✅ Transporte em ônibus semi-leito;
-- ✅ Guia acompanhante Francelino Turismo;
-- ✅ Seguro viagem;
-- ✅ Guia local em Foz do Iguaçu.
+- Explore o mundo de Madagascar;
+- Enfrente a FireWhip;
+- Assista ao show Hot Wheels Epic Show.

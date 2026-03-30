@@ -1,7 +1,7 @@
 ---
 layout: pacote.njk
 title: "Buenos Aires Clássica"
-image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=600&q=80"
+image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18"
 badge:
   text: "Internacional"
   color: "Azul"
