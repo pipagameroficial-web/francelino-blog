@@ -148,7 +148,7 @@
                 {% for pacote in collections.pacotes_aereos %}
                 <div class="package-card">
                     <div class="card-img-wrapper">
-                        <img src="{{ pacote.data.image }}" alt="{{ pacote.data.title }}">
+                        <img src="{{ pacote.data.image | optimize_unsplash(800) }}" alt="{{ pacote.data.title }}" loading="lazy">
                         {% if pacote.data.badge.text %}
                         <span class="badge badge-{{ pacote.data.badge.color | lower }}" style="max-width: 90%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                             {{ pacote.data.badge.text }}
@@ -189,7 +189,7 @@
                 {% for pacote in collections.pacotes_rodoviarios %}
                 <div class="package-card">
                     <div class="card-img-wrapper">
-                        <img src="{{ pacote.data.image }}" alt="{{ pacote.data.title }}">
+                        <img src="{{ pacote.data.image | optimize_unsplash(800) }}" alt="{{ pacote.data.title }}" loading="lazy">
                         {% if pacote.data.badge.text %}
                         <span class="badge badge-{{ pacote.data.badge.color | lower }}" style="max-width: 90%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                             {{ pacote.data.badge.text }}
@@ -230,7 +230,7 @@
                 {% for pacote in collections.cruzeiros %}
                 <div class="package-card">
                     <div class="card-img-wrapper">
-                        <img src="{{ pacote.data.image }}" alt="{{ pacote.data.title }}">
+                        <img src="{{ pacote.data.image | optimize_unsplash(800) }}" alt="{{ pacote.data.title }}" loading="lazy">
                         {% if pacote.data.badge.text %}
                         <span class="badge badge-{{ pacote.data.badge.color | lower }}" style="max-width: 90%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                             {{ pacote.data.badge.text }}

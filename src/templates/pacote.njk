@@ -55,25 +55,183 @@
             padding: 0 20px;
         }
 
-        /* Galeria Estilo Gadotti */
-        .gallery-grid {
+        /* Premium Gallery Layout */
+        .gallery-container {
+            padding: 40px 0 80px;
+            background: #FFFFFF;
+        }
+
+        .premium-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 12px;
             margin: 25px 0 40px;
         }
 
+        /* Mosaic Layout only for 6+ items */
+        .premium-gallery.has-6-plus {
+            grid-template-areas: 
+                "main main side1"
+                "main main side2"
+                "bot1 bot2 bot3"
+                "bot4 bot5 bot6";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(4, 220px);
+        }
+
         .gallery-item {
-            aspect-ratio: 4/3;
-            border-radius: 8px;
+            position: relative;
+            border-radius: 12px;
             overflow: hidden;
             background: #eee;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .gallery-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0);
+            transition: background 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            background: rgba(0,0,0,0.15);
+        }
+
+        .has-6-plus .item-0 { grid-area: main; }
+        .has-6-plus .item-1 { grid-area: side1; }
+        .has-6-plus .item-2 { grid-area: side2; }
+        .has-6-plus .item-3 { grid-area: bot1; }
+        .has-6-plus .item-4 { grid-area: bot2; }
+        .has-6-plus .item-5 { grid-area: bot3; }
+        .has-6-plus .item-6 { grid-area: bot4; }
+        .has-6-plus .item-7 { grid-area: bot5; }
+        .has-6-plus .item-8 { grid-area: bot6; }
+
+        /* General grid items if not mosaic */
+        .premium-gallery:not(.has-6-plus) .gallery-item {
+            aspect-ratio: 16/9;
+        }
+
+        .more-photos-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+
+        /* Lightbox Styles */
+        .lightbox-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #111;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            flex-direction: column;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 80%;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            z-index: 10000;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%; width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .lightbox-nav i {
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            pointer-events: auto;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .lightbox-nav i:hover { opacity: 1; }
+
+        @media (max-width: 992px) {
+            .main-layout { grid-template-columns: 1fr; }
+            
+            /* Mobile Carousel */
+            .premium-gallery {
+                display: flex;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                gap: 15px;
+                padding: 0 20px 20px;
+                margin: 25px -20px 40px;
+                grid-template-areas: none;
+                grid-template-columns: none;
+                grid-template-rows: none;
+                scrollbar-width: none;
+            }
+
+            .premium-gallery::-webkit-scrollbar { display: none; }
+
+            .gallery-item {
+                flex: 0 0 85%;
+                scroll-snap-align: start;
+                height: 350px;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .gallery-item:last-child {
+                margin-right: 20px;
+            }
         }
 
         /* Sidebar Info Box */
@@ -154,9 +312,8 @@
             margin-top: 80px;
         }
 
-        @media (max-width: 992px) {
-            .main-layout { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            /* Final check for mobile grid override */
+            .gallery-container { padding: 40px 0; }
         }
     </style>
 </head>
@@ -187,13 +344,33 @@
                 <i class="fa-solid fa-tags"></i> {{ category | default('Nacional') }}
             </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="{{ gallery.img1 | default(image) }}" alt="Foto 1"></div>
-                <div class="gallery-item"><img src="{{ gallery.img2 | default(image) }}" alt="Foto 2"></div>
-                <div class="gallery-item"><img src="{{ gallery.img3 | default(image) }}" alt="Foto 3"></div>
-                <div class="gallery-item"><img src="{{ gallery.img4 | default(image) }}" alt="Foto 4"></div>
-                <div class="gallery-item"><img src="{{ gallery.img5 | default(image) }}" alt="Foto 5"></div>
-                <div class="gallery-item"><img src="{{ gallery.img6 | default(image) }}" alt="Foto 6"></div>
+            <div class="gallery-container">
+                {# Robustly determine the gallery list #}
+                {% set gallery_list = [] %}
+                {% if gallery | is_array %}
+                    {% set gallery_list = gallery %}
+                {% else %}
+                    {# Fallback to old img1-6 format if exists #}
+                    {% set g_items = [gallery.img1, gallery.img2, gallery.img3, gallery.img4, gallery.img5, gallery.img6] %}
+                    {# Using a temporary dummy loop to filter not empty items because of Nunjucks set push limitations #}
+                    {% for g_img in g_items %}
+                        {% if g_img %}
+                            {% set gallery_list = gallery_list.concat([g_img]) %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                <div class="premium-gallery {{ 'has-6-plus' if gallery_list.length >= 6 }}" id="premium-gallery">
+                    {% for item in gallery_list %}
+                        {% set img_url = item.image if item.image else item %}
+                        <div class="gallery-item item-{{ loop.index0 }}" data-index="{{ loop.index0 }}">
+                            {% if loop.index0 == 5 and gallery_list.length > 6 %}
+                                <div class="more-photos-overlay">+{{ gallery_list.length - 6 }} fotos</div>
+                            {% endif %}
+                            <img src="{{ img_url | optimize_unsplash(800) }}" alt="Foto {{ loop.index }}" loading="lazy">
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
 
             <div class="itinerary-card">
@@ -277,6 +454,103 @@
             © 2026 - Francelino Turismo. Todos os direitos reservados.
         </div>
     </footer>
+
+    </div>
+
+    <!-- Premium Lightbox Structure -->
+    <div class="lightbox-modal" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <div class="lightbox-nav">
+            <i class="fa-solid fa-chevron-left" id="prev-img"></i>
+            <i class="fa-solid fa-chevron-right" id="next-img"></i>
+        </div>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Fullscreen picture">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('premium-gallery');
+            const items = gallery.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('lightbox-close');
+            const prevBtn = document.getElementById('prev-img');
+            const nextBtn = document.getElementById('next-img');
+            
+            let currentIndex = 0;
+            const images = Array.from(items).map(item => item.querySelector('img').src);
+
+            // Scroll Animation (Fade + Slide Up) with consistent cascade
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const index = entry.target.getAttribute('data-index');
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            items.forEach(item => observer.observe(item));
+
+            // Lightbox Logic
+            const openLightbox = (index) => {
+                currentIndex = index;
+                updateLightbox();
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            };
+
+            const updateLightbox = () => {
+                lightboxImg.src = images[currentIndex];
+            };
+
+            items.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index));
+            });
+
+            closeBtn.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            const nextImg = () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateLightbox();
+            };
+
+            const prevImg = () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateLightbox();
+            };
+
+            nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImg(); });
+            prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImg(); });
+
+            // Keyboard Navigation
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.style.display === 'flex') {
+                    if (e.key === 'ArrowRight') nextImg();
+                    if (e.key === 'ArrowLeft') prevImg();
+                    if (e.key === 'Escape') closeBtn.click();
+                }
+            });
+
+            // Swipe logic for mobile (Simple version)
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            lightbox.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+            lightbox.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchEndX < touchStartX - 50) nextImg();
+                if (touchEndX > touchStartX + 50) prevImg();
+            });
+        });
+    </script>
 
 </body>
 </html>

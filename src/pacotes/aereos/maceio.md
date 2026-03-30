@@ -1,7 +1,7 @@
 ---
 layout: pacote.njk
 title: "Encantos de Maceió e Maragogi"
-image: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=600&q=80"
+image: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3"
 badge:
   text: ""
   color: "Azul"

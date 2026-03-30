@@ -1,25 +1,39 @@
 ---
 layout: pacote.njk
-title: Experiência Foz, Paraguay e Argentina sem Preocupação 🇵🇾🇧🇷🇦🇷
-category: Nacional
-image: https://images.unsplash.com/photo-1543781525-2fa7883395c5?auto=format&fit=crop&w=600&q=80
+title: "Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷"
+category: "Internacional"
+image: "/agencia-bus.png"
 gallery:
-  img1: https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600&q=80
-  img2: https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600&q=80
-  img3: https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80
-  img4: https://images.unsplash.com/photo-1543781525-2fa7883395c5?auto=format&fit=crop&w=600&q=80
-  img5: https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600&q=80
-  img6: https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600&q=80
+  - image: "/agencia-bus.png"
+  - image: "/gal_compras.jpg"
+  - image: "/agencia-flight.png"
+  - image: "/foto_grupo.jpg"
+  - image: "/hero_paraguay.png"
+  - image: "/agencia-cruise.png"
 badge:
-  text: ChocoPáscoa
-  color: Laranja
+  text: "Saída Setembro"
+  color: "Azul"
 dates:
-  departure: 02/04/2026
-  return: 06/04/2026
-  display: 02 a 06 Abr
-duration: 5 Dias
-location: Gramado, RS
-price: "1.250"
-price_cond: por pessoa | Em até 10x sem juros
+  departure: "04/09/2026"
+  return: "06/09/2026"
+  display: "04 a 06 Set"
+duration: "2 Dias"
+location: "Foz do Iguaçu"
+price: "650"
+price_cond: "por pessoa | Em até 10x sem juros"
 ---
-📆 🔹 **09/10/2026 | (SEXTA-FEIRA) — SAÍDA | BARRA FUNDA | SÃO PAULO**
+### Detalhes do Roteiro
+
+- 📆 🔹 **04/09/2026 | (SEXTA-FEIRA) — SAÍDA | BARRA FUNDA | SÃO PAULO**
+- 🚌 ONIBUS
+- 🕟 15:00 – Concentração, check-in, documentos, bagagens, orientações;
+- 🕕 17:00 – Saída oficial;
+- ⏳ Tempo médio: 16 a 18 horas;
+- 📏 Distância: ~1.050 km
+- 🥐 Parada Para Jantar;
+
+### Serviços Inclusos
+- ✅ Transporte em ônibus semi-leito;
+- ✅ Guia acompanhante Francelino Turismo;
+- ✅ Seguro viagem;
+- ✅ Guia local em Foz do Iguaçu.
