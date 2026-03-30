@@ -24,7 +24,7 @@ price_cond: por pessoa | Em até 10x sem juros
 link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou **entrada
   de R$200 + parcelas no PIX** até **20 dias antes do embarque;**
 ---
-### Detalhes do Roteiro
+# Detalhes do Roteiro
 
 * 📆 🔹 **04/09/2026 | (SEXTA-FEIRA) — SAÍDA | BARRA FUNDA | SÃO PAULO**
 * 🚌 ONIBUS
@@ -77,7 +77,7 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * Incluso Ingressos Cataratas;
 * Guiado em todo trajeto;
 
-**📦 O QUE ESTÁ INCLUSO:**
+# **📦 O QUE ESTÁ INCLUSO:**
 
 🚌 Transporte rodoviário executivo;
 
