@@ -34,6 +34,8 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * 📏 Distância: ~1.050 km
 * 🥐 Parada Para Jantar;
 
+
+
 - - -
 
 ### 📆 🔹 05/09/2026 (SÁBADO) | 🇦🇷 - By Night Argentina
@@ -56,15 +58,6 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 >
 > ⚠️ **ATENÇÃO:** Lembrando que temos acesso ao exclusivo corredor turístico - que muitas vezes economiza horas de fila!
 
-### Serviços Inclusos
-
-* ✅ Transporte em ônibus semi-leito;
-* ✅ Guia acompanhante Francelino Turismo;
-* ✅ Seguro viagem;
-* ✅ Guia local em Foz do Iguaçu.
-
-
-
 📆 🔹 **06/09/2026 (DOMINGO) — PARAGUAI 🇵🇾**
 
 * ☕ 07:00–08:00 – Café da manhã;
@@ -77,8 +70,6 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * 🏨 Fly Time Eletrônicos;
 * Retorno as 14:30;
 
-
-
 📆 🔹 **07/09/2026 (SEGUNDA-FEIRA) -** 🇧🇷 Cataratas Do Iguaçu 🦜
 
 * ⏰ Saída: 08h
@@ -86,9 +77,7 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * Incluso Ingressos Cataratas;
 * Guiado em todo trajeto;
 
-
-
-📦 **O QUE ESTÁ INCLUSO:**
+**📦 O QUE ESTÁ INCLUSO:**
 
 🚌 Transporte rodoviário executivo;
 
@@ -97,3 +86,25 @@ link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou *
 * **Tomadas USB** (tipo A e C) em muitas configurações.
 * **Ar-condicionado multizona**, permitindo temperaturas ajustadas por área.
 * Painéis multimídia, Wi-Fi opcional e sistemas de entretenimento podem ser incluídos conforme opção do operador.
+
+
+### **Serviços Inclusos**
+
+* ✅ Transporte em ônibus semi-leito;
+* ✅ Guia acompanhante Francelino Turismo;
+* ✅ Seguro viagem;
+* ✅ Guia local em Foz do Iguaçu.
+
+
+
+### **⚠️ O que não está incluso;**
+
+❌ Demais refeições
+
+❌ Ingressos não citados;
+
+❌ Passeios não citados;
+
+❌ Despesas pessoais;
+
+❌ Compras e gastos individuais;
