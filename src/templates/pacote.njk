@@ -57,7 +57,8 @@
 
         /* Premium Gallery Layout */
         .gallery-container {
-            padding: 20px 0 10px;
+            padding: 0;
+            margin: 0;
             background: #FFFFFF;
         }
 
@@ -65,7 +66,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 12px;
-            margin: 15px 0 0;
+            margin: 15px 0 10px;
         }
 
         /* Mosaic Layout only for 6+ items */
@@ -73,10 +74,9 @@
             grid-template-areas: 
                 "main main side1"
                 "main main side2"
-                "bot1 bot2 bot3"
-                "bot4 bot5 bot6";
+                "bot1 bot2 bot3";
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: repeat(4, 220px);
+            grid-template-rows: repeat(3, 220px);
         }
 
         .gallery-item {
@@ -360,7 +360,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            margin: 0 0 30px;
+            margin: 0 0 40px;
         }
 
         .info-card-premium {
