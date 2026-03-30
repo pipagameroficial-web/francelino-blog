@@ -4,7 +4,7 @@ title: Experiência Foz, Paraguay e Argentina 🇵🇾🇧🇷🇦🇷
 category: Internacional
 image: /agencia-bus.png
 gallery:
-  - image: /agencia-bus.png
+  - uploads/whatsapp-image-2026-03-30-at-12.44.36.jpeg
   - image: /gal_compras.jpg
   - uploads/whatsapp-image-2026-03-30-at-12.44.36-1-.jpeg
   - image: /foto_grupo.jpg
