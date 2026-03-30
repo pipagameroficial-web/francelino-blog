@@ -21,6 +21,8 @@ duration: 2 Dias
 location: Foz do Iguaçu
 price: "1500"
 price_cond: por pessoa | Em até 10x sem juros
+link: ✅ A vista 3% de desconto;  💳 Em até **12x  no cartão;**  💸 Ou **entrada
+  de R$200 + parcelas no PIX** até **20 dias antes do embarque;**
 ---
 ### Detalhes do Roteiro
 
