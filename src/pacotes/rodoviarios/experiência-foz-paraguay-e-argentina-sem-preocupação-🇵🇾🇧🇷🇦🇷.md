@@ -54,4 +54,12 @@ payment_conditions: >-
 * **🏦 New Zone Importados;**
 * 🏨 Fly Time Eletrônicos;
 * Retorno as 14:30;
-*
+
+
+
+📆 🔹 12\*\*/10/2026 (SEGUNDA-FEIRA) -\*\* 🇧🇷 Cataratas Do Iguaçu 🦜
+
+* ⏰ Saída: 08h
+* ⏱️ Retorno: 15h
+* Incluso Ingressos Cataratas;
+* Guiado em todo trajeto;
