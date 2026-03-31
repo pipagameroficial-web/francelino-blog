@@ -2,7 +2,7 @@
 layout: pacote.njk
 title: Experiência Foz, Paraguay e Argentina sem Preocupação 🇵🇾🇧🇷🇦🇷
 category: Nacional
-image: uploads/whatsapp-image-2026-03-30-at-12.44.35.jpeg
+image: uploads/whatsapp-image-2026-03-30-at-17.34.54.jpeg
 badge:
   text: f
   color: Azul
