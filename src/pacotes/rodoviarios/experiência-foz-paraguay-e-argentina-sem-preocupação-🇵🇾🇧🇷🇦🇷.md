@@ -40,3 +40,18 @@ payment_conditions: >-
 * ⏳ Tempo médio: 16 a 18 horas;
 * 📏 Distância: ~1.050 km
 * 🥐 Parada Para Jantar;
+
+
+
+📆 🔹 11\*\*/10/2026 (DOMINGO) — PARAGUAI 🇵🇾\*\*
+
+* ☕ 07:00–08:00 – Café da manhã;
+* 🌅 08:00 – Saída compras no paraguay;
+* 🇨🇳 Shopping China;
+* 🇵🇾 Shopping del este paraguay
+* 🇨🇵 Shopping París;
+* 🏢 Cell Shopping;
+* **🏦 New Zone Importados;**
+* 🏨 Fly Time Eletrônicos;
+* Retorno as 14:30;
+*
