@@ -512,7 +512,7 @@
             </div>
 
             <div class="extra-info-grid" style="grid-template-columns: 1fr;">
-                <!-- Card de Instagram (Agora com conteúdo REAL do perfil) -->
+                 <!-- Card de Instagram (Agora com conteúdo REAL do perfil) -->
                 <div class="info-card-premium instagram-card" style="flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                         <div style="display: flex; align-items: center; gap: 12px;">
@@ -555,6 +555,24 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Card de Formas de Pagamento -->
+                {% if payment_conditions %}
+                <div class="info-card-premium" style="margin-top: 20px;">
+                    <h4><i class="fa-solid fa-credit-card"></i> Condições de Pagamento</h4>
+                    <div class="payment-content">
+                        <ul class="payment-list-organized">
+                            {# Dividir por quebra de linha e filtrar linhas vazias #}
+                            {% set lines = payment_conditions.split('\n') %}
+                            {% for line in lines %}
+                                {% if line | trim %}
+                                    <li>{{ line | safe }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
             </div>
 
             <div class="itinerary-card">
@@ -596,17 +614,6 @@
                         <i class="fa-brands fa-whatsapp" style="color: var(--success-green); font-size: 1.2rem;"></i> Precisa de ajuda? Clique aqui
                     </a>
                 </div>
-
-                {% if payment_conditions %}
-                <div class="payment-section" style="margin-top: 25px; border-top: 1px solid #EEE; padding-top: 20px;">
-                    <h4 style="font-size: 0.85rem; text-transform: uppercase; color: #999; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-credit-card" style="color: var(--accent-orange);"></i> Formas de Pagamento
-                    </h4>
-                    <div class="payment-content">
-                        {{ payment_conditions | safe }}
-                    </div>
-                </div>
-                {% endif %}
             </div>
         </aside>
     </main>
