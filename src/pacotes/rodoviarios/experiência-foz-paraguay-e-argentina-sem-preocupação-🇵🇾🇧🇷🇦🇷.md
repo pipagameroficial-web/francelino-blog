@@ -63,3 +63,37 @@ payment_conditions: >-
 * ⏱️ Retorno: 15h
 * Incluso Ingressos Cataratas;
 * Guiado em todo trajeto;
+
+
+
+📦 O QUE ESTÁ INCLUSO:
+
+🚌 Transporte rodoviário executivo
+
+* **Capacidade:** tipicamente 60 **passageiros;**
+* Em muitas versões, **poltronas reclináveis**, algumas com funções semi-*leito.*
+* **Tomadas USB** (tipo A e C) em muitas configurações.
+* **Ar-condicionado multizona**, permitindo temperaturas ajustadas por área.
+* Painéis multimídia, Wi-Fi opcional e sistemas de entretenimento podem ser incluídos conforme opção do operador.
+
+🗺️ Organização completa da experiência;
+
+* 🧭 Acompanhamento de guia
+* 📋 Roteiro estruturado
+* 🛍️ Apoio em compras
+* 🛂 Orientação de fronteira
+* 🏨 Hotel ( com café da manhã)
+* 🛡️ Seguro viagem
+* ✅ Passeios mencionados no roteiro;
+
+**⚠️ O que não está incluso;**
+
+❌ Demais refeições
+
+❌ Ingressos não citados;
+
+❌ Passeios não citados;
+
+❌ Despesas pessoais;
+
+❌ Compras e gastos individuais;
