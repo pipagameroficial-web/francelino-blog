@@ -1,19 +1,24 @@
 ---
 layout: pacote.njk
-title: "Diversão no Beto Carrero World"
-image: "https://images.unsplash.com/photo-1587823336302-601e3b6dcc36"
+title: Experiência Foz, Paraguay e Argentina sem Preocupação 🇵🇾🇧🇷🇦🇷
+category: Internacional
+image: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36
 gallery:
   - image: https://images.unsplash.com/photo-1587823336302-601e3b6dcc36
   - image: https://images.unsplash.com/photo-1509191434112-9c10f808a098
   - image: https://images.unsplash.com/photo-1501785888041-af3ef285b470
 badge:
-  text: ""
-  color: "Azul"
-date_range: "Finais de Semana"
-duration: "2 Dias"
-location: "Santa Catarina"
-price: "650"
-price_cond: "por pessoa | Em até 10x sem juros"
+  text: f
+  color: Azul
+dates:
+  display: f
+  departure: 30/03/2026
+  return: 30/03/2026
+price: "1700"
+date_range: Finais de Semana
+duration: 2 Dias
+location: Santa Catarina
+price_cond: por pessoa | Em até 10x sem juros
 ---
 ### Diversão Garantida no Maior Parque Temático da América Latina!
 
