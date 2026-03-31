@@ -1,7 +1,10 @@
 ---
-layout: "blog.njk"
-title: "Bem-vindo ao Novo Blog!"
-description: "Este é o primeiro artigo usando o novo construtor de páginas automatizado."
+layout: blog.njk
+title: "Excursão para o Paraguai: Vale a Pena? Preços, Dicas e Como Economizar
+  na Viagem"
+description: Excursão para o Paraguai é a melhor forma de viajar barato e com
+  segurança?  Se você está pesquisando sobre excursão para o Paraguai,
+  provavelmente quer economizar, comprar bem e evitar dor de cabeça na viagem.
 date: 2026-03-26T12:00:00.000Z
 ---
 
