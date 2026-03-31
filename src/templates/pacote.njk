@@ -618,42 +618,53 @@
         </aside>
     </main>
 
-    <footer class="footer-premium">
-        <div class="container-wide" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px;">
-            <div>
-                <h3 style="margin-bottom: 20px;">Sua confiança é o que nos move</h3>
-                <div style="display: flex; gap: 15px; font-size: 1.5rem;">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="/" class="footer-logo">
+                        <img src="/assets/logo-oficial.png" alt="Francelino Turismo" class="footer-logo-img">
+                    </a>
+                    <p>Viaje com quem entende e transforme seus sonhos em experiências inesquecíveis.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/{{ settings.whatsapp }}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="/#aereos">Aéreos</a></li>
+                        <li><a href="/#rodoviarios">Rodoviários</a></li>
+                        <li><a href="/#cruzeiros">Cruzeiros</a></li>
+                        <li><a href="/promocao/">Promoções</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Minha Reserva</a></li>
+                        <li><a href="#">Documentação</a></li>
+                        <li><a href="#">Seguro Viagem</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Fale Conosco</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i> Central de Reservas</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> {{ settings.whatsapp }}</li>
+                        <li><i class="fa-solid fa-envelope"></i> contato@francelinoturismo.com.br</li>
+                    </ul>
                 </div>
             </div>
-            <div>
-                <h4 style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">Pacotes</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;">Aéreos</li>
-                    <li style="margin-bottom: 10px;">Rodoviários</li>
-                    <li style="margin-bottom: 10px;">Cruzeiros</li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Francelino Turismo. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
             </div>
-            <div>
-                <h4 style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">Serviços</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;">Vistos</li>
-                    <li style="margin-bottom: 10px;">Passaportes</li>
-                    <li style="margin-bottom: 10px;">Seguro Viagem</li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="font-size: 0.8rem; color: #999; text-transform: uppercase; margin-bottom: 20px;">Contato</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-phone"></i> {{ settings.whatsapp }}</li>
-                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-envelope"></i> contato@francelinoturismo.com.br</li>
-                </ul>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 60px; font-size: 0.8rem; color: #BBB;">
-            © 2026 - Francelino Turismo. Todos os direitos reservados.
         </div>
     </footer>
 
